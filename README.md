@@ -63,3 +63,9 @@ Looking for high-velocity, enterprise-grade software engineering backed by trans
 ## Executive Curriculum Vitae & Governance
 - **Founder & Lead Architect:** [View Full Executive Engineering CV (`CV_MUSLUM_BAYSOZ.md`)](https://://github.com)
 - **Engineering Standard:** Strict Zero-Defect Principal Governance | Automated CI/CD & Sandbox Security Verification
+
+---
+
+## Featured Open-Source Engineering Repositories
+1. **[`baysoz-zero-trust-engine`](https://github.com)** — Memory-safe **Rust** cryptographic command authentication core paired with a **Python 3.13 KVKK/GDPR** automated PII scrubbing engine and GitHub Actions CI/CD.
+2. **[`baysoz-polyglot-math-orchestrator`](https://github.com)** — Deterministic mathematical decision engine (`MATH-CORE`) scoring latency, memory safety, and concurrency across global programming languages.
