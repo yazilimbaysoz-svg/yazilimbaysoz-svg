@@ -57,3 +57,9 @@ flowchart TD
 Looking for high-velocity, enterprise-grade software engineering backed by transparent AI orchestration and strict security compliance?
 - **Organization:** BAYSOZ YAZILIM
 - **Focus Areas:** Autonomous Multi-Agent Systems, High-Performance Backend & Systems Engineering, Secure Enterprise Web Platforms, AI Workflow Automation.
+
+---
+
+## Executive Curriculum Vitae & Governance
+- **Founder & Lead Architect:** [View Full Executive Engineering CV (`CV_MUSLUM_BAYSOZ.md`)](https://://github.com)
+- **Engineering Standard:** Strict Zero-Defect Principal Governance | Automated CI/CD & Sandbox Security Verification
