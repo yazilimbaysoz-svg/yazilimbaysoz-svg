@@ -61,6 +61,7 @@ flowchart TD
 | Proje | Açıklama |
 | :--- | :--- |
 | [**sec-audit-cli**](https://github.com/yazilimbaysoz-svg/sec-audit-cli) | **Vitrin projesi.** Tek komutla gizli anahtar, zafiyetli paket ve OWASP riski tarayan; sıfır çalışma zamanı bağımlılığıyla çalışan Python CLI. Renkli terminal raporu, deterministik JSON çıktısı, maskelenmiş bulgular ve CI eşikleri sunar. |
+| [**envlens**](https://github.com/yazilimbaysoz-svg/envlens) | **Yeni:** Ortam değişkenlerine x-ray. Kod, `.env`, Docker Compose, Dockerfile ve GitHub Actions'ı çapraz tarayıp eksik key, sızdırılmış sır, config drift ve kullanılmayan template değerlerini deploy öncesi yakalar. 10+ dil, JSON/Markdown rapor, CI eşikleri ve sıfır runtime bağımlılığı. |
 | [**baysoz-zero-trust-engine**](https://github.com/yazilimbaysoz-svg/baysoz-zero-trust-engine) | Rust kriptografik komut kalkanı ve Python tabanlı KVKK/GDPR uyumlu PII temizleme motoru. |
 | [**baysoz-polyglot-math-orchestrator**](https://github.com/yazilimbaysoz-svg/baysoz-polyglot-math-orchestrator) | Gecikme, bellek güvenliği ve eşzamanlılığa göre dil seçimi yapan deterministik matematik motoru. |
 | [**Lavox-Elektronik-Kurumsal-ERP**](https://github.com/yazilimbaysoz-svg/Lavox-Elektronik-Kurumsal-ERP) | Kurumsal ERP alanında üretilen iş uygulaması. |
@@ -76,6 +77,17 @@ sec-audit . --fail-on high
 
 Gizli anahtar taraması (Shannon entropisi dahil), 9 ekosistem için bağımlılık/CVE kontrolü,
 OWASP denetimi ve `--online` ile isteğe bağlı OSV sorgusu tek bir araçta birleşir.
+
+### envlens — hızlı bakış
+
+```bash
+uv tool install envlens
+envlens scan . --fail-on high
+envlens scan . --format markdown >> "$GITHUB_STEP_SUMMARY"
+```
+
+`MISSING`, `UNDECLARED`, `STALE`, `LEAK` ve `DRIFT` kuralları; 10+ dil, GitHub Actions
+`${{ secrets.X }}` referansları ve deterministik table/JSON/Markdown raporları.
 
 ---
 
