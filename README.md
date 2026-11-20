@@ -102,6 +102,7 @@ OWASP denetimi ve `--online` ile isteğe bağlı OSV sorgusu tek bir araçta bir
 <!-- FACTORY:START -->
 | Otomatik üretilen proje | Açıklama |
 | :--- | :--- |
+| [baysoz-logmask](https://github.com/yazilimbaysoz-svg/baysoz-logmask) | Log'lardaki PII ve sırları doğrulanmış desenlerle maskeleyen bağımlılıksız CLI. Stack: `Python 3.12, uv, pytest, ruff, semgrep`. |
 <!-- FACTORY:END -->
 
 ---
