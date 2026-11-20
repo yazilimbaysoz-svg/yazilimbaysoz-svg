@@ -21,7 +21,7 @@ env:
   OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
   ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-  OPENCODE_MODEL: ${{ vars.OPENCODE_MODEL || 'openrouter/anthropic/claude-sonnet-5.5' }}
+  OPENCODE_MODEL: ${{ vars.OPENCODE_MODEL || 'opencode/big-pickle' }}
 
 jobs:
   uret-ve-yayinla:
@@ -62,8 +62,22 @@ jobs:
 
       - name: opencode CLI kur
         run: |
-          npm install -g @opencode/cli
+          curl -fsSL https://opencode.ai/install | bash -s -- --version 1.19.6 --no-modify-path
+          export PATH="$HOME/.opencode/bin:$PATH"
+          command -v opencode
           opencode --version
+
+      - name: opencode yapilandirmasini olustur
+        run: |
+          mkdir -p "$HOME/.config/opencode"
+          cat > "$HOME/.config/opencode/opencode.json" <<'JSON'
+          {
+            "$schema": "https://opencode.ai",
+            "model": "opencode/big-pickle",
+            "permission": "allow"
+          }
+          JSON
+          cat "$HOME/.config/opencode/opencode.json"
 
       - name: Gerekli kimlik bilgilerini dogrula
         run: |
@@ -71,8 +85,10 @@ jobs:
             echo "::error::GH_TOKEN secret'i yok. Yeni repo olusturmak icin repo scope'lu classic PAT gereklidir."
             exit 1
           fi
-          if [ -z "$OPENROUTER_API_KEY$ANTHROPIC_API_KEY$OPENAI_API_KEY" ]; then
-            echo "::error::OPENROUTER_API_KEY, ANTHROPIC_API_KEY veya OPENAI_API_KEY secret'lerinden biri gereklidir."
+          if [[ "$OPENCODE_MODEL" == opencode/* ]]; then
+            echo "Ucretsiz opencode modeli: $OPENCODE_MODEL - harici LLM API anahtari gerekmez."
+          elif [ -z "$OPENROUTER_API_KEY$ANTHROPIC_API_KEY$OPENAI_API_KEY" ]; then
+            echo "::error::Ucretsiz olmayan model ($OPENCODE_MODEL) icin OPENROUTER_API_KEY, ANTHROPIC_API_KEY veya OPENAI_API_KEY secret'lerinden biri gereklidir."
             exit 1
           fi
           gh auth status
