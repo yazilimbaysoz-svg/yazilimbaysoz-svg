@@ -131,6 +131,7 @@ Python 3.11+ ve tek bağımlılık bile yok.
 | [envpair](https://github.com/yazilimbaysoz-svg/envpair) | .env dosyaları arasındaki yapılandırma farklarını, eksik anahtarları ve hataları denetleyen hafif bir Python CLI aracı. Stack: `Python 3.12, uv, pytest, ruff`. |
 | [baysoz-cardinalis](https://github.com/yazilimbaysoz-svg/baysoz-cardinalis) | Cardinality risk gate for OpenTelemetry and Prometheus telemetry with HLL++ estimation, unbounded-label detection, collector audits, and SARIF CI reports. | Stack: `Python, PyYAML, uv` |
 | [baysoz-otelgate](https://github.com/yazilimbaysoz-svg/baysoz-otelgate) | Static policy gate and semantic linter for OpenTelemetry Collector configs with security checks and SARIF output. | Stack: `Python, PyYAML` |
+| [baysoz-routegate](https://github.com/yazilimbaysoz-svg/baysoz-routegate) | Offline Kubernetes Gateway API route-conflict and shadowing gate with deterministic precedence resolution and SARIF CI enforcement — Baysöz Labs <baysozlabs@proton.me> | Stack: `Python, PyYAML, uv` |
 <!-- FACTORY:END -->
 
 ---
