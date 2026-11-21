@@ -31,7 +31,7 @@ jobs:
     steps:
       - name: Provision security & autonomous remediation stack
         run: |
-          curl -LsSf https://astral.sh | sh
+          python -m pip install --upgrade pip uv ruff semgrep
           echo "$HOME/.local/bin" >> $GITHUB_PATH
           npm install -g opencode-ai
 
