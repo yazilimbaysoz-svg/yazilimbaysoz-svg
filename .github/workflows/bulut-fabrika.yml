@@ -66,7 +66,7 @@ jobs:
         run: |
           gh repo list "$OWNER" --limit 100 --json name,description > "$RUNNER_TEMP/existing-repos.json"
 
-      - name: Execute Baysoz Software Corp. division pipeline
+      - name: Execute Baysöz Labs division pipeline
         env:
           FACTORY_DIR: ${{ runner.temp }}/baysoz-new-project
           EXISTING_REPOS_PATH: ${{ runner.temp }}/existing-repos.json
@@ -75,12 +75,14 @@ jobs:
         run: |
           mkdir -p "$FACTORY_DIR"
           cat << 'PROMPT' > "$RUNNER_TEMP/directive.txt"
-          You are an autonomous Principal Engineering Division ($DIVISION) operating under Baysoz Technology Holdings & Baysoz Software Corp.
+          You are an autonomous Principal Engineering Division ($DIVISION) at Baysöz Labs (baysozlabs@proton.me | https://github.com).
           Execute end-to-end without questions or confirmation:
-          1. Inspect $EXISTING_REPOS_PATH and live GitHub trends via `gh search repos`. Architect a novel, high-star, non-overlapping open-source Python 3.12+ CLI/library tailored to the `$DIVISION` domain inside $FACTORY_DIR (use `uv`, zero heavy services, zero local LLMs). Include `pyproject.toml`, `README.md` (badges + install + architecture + real CLI output), MIT `LICENSE`, `src/` modular package, `tests/` adversarial test suite, `.github/workflows/ci.yml`, and `.gitignore`.
-          2. Enforce zero-defect quality gates: `uv venv && uv pip install -e . && uv pip install pytest && uv run pytest -q && ruff check . && semgrep --config p/default .`. Iterate until all tests pass and static/security gates report zero findings.
-          3. Publish via `gh repo create yazilimbaysoz-svg/<project-slug> --public --source=. --remote=origin --push` with a crisp description and topics.
-          4. Write strictly valid JSON to $RESULT_FILE: {"name":"<project-slug>","description":"<concise English description>","url":"<GitHub URL>","highlights":["<feature-1>","<feature-2>"],"stack":["Python","<lib>"]}. Do not touch any other files in the showcase workspace.
+          1. Deeply inspect $EXISTING_REPOS_PATH and mine live GitHub trends, open issues, and ecosystem pain points via `gh search repos` and `gh search issues`. Trivial, redundant, or toy utilities are STRICTLY FORBIDDEN. Select a genuinely needed, high-star open-source Python 3.12+ CLI/library tailored to `$DIVISION` inside $FACTORY_DIR (use `uv`, zero heavy services, zero local LLMs).
+          2. Enforce strict enterprise folder structure and documentation: `docs/MARKET_RESEARCH.md` (deep ecosystem justification), `docs/ARCHITECTURE.md`, `PLAN.md`, `SECURITY.md`, `CHANGELOG.md`, `README.md` (badges + install + architecture + real CLI output), MIT `LICENSE`, `pyproject.toml`, `.github/workflows/ci.yml`, `.gitignore`, `src/<pkg>/`, and `tests/`.
+          3. Every public file, `pyproject.toml`, `LICENSE`, `README.md`, and CLI `--version`/`--help` output MUST explicitly attribute **Baysöz Labs** (`baysozlabs@proton.me`). Never use legal entity suffixes like Holding or Corp.
+          4. Enforce zero-defect quality gates: `uv venv && uv pip install -e . && uv pip install pytest && uv run pytest -q && ruff check --select E,F,W,S,B . && semgrep --config p/default --error .`. Iterate until all tests pass and static/security gates report zero findings.
+          5. Publish via `gh repo create yazilimbaysoz-svg/<project-slug> --public --source=. --remote=origin --push` with a crisp description and topics.
+          6. Write strictly valid JSON to $RESULT_FILE: {"name":"<project-slug>","description":"<concise English description>","url":"<GitHub URL>","highlights":["<feature-1>","<feature-2>"],"stack":["Python","<lib>"]}. Do not touch any other files in the showcase workspace.
           PROMPT
           sed -i "s|\$DIVISION|$DIVISION|g; s|\$FACTORY_DIR|$FACTORY_DIR|g; s|\$EXISTING_REPOS_PATH|$EXISTING_REPOS_PATH|g; s|\$RESULT_FILE|$RESULT_FILE|g" "$RUNNER_TEMP/directive.txt"
           opencode run --auto --model "$OPENCODE_MODEL" --dir "$FACTORY_DIR" "$(cat "$RUNNER_TEMP/directive.txt")"
