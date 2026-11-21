@@ -1,0 +1,73 @@
+name: Baysoz Continuous Security Patrol
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: baysoz-continuous-security-patrol
+  cancel-in-progress: false
+
+env:
+  OWNER: yazilimbaysoz-svg
+  GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
+  OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  OPENCODE_MODEL: ${{ vars.OPENCODE_MODEL || 'opencode/big-pickle' }}
+
+jobs:
+  continuous-appsec-audit:
+    name: 24/7 Cloud Security & Remediation Patrol
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Provision security & autonomous remediation stack
+        run: |
+          curl -LsSf https://astral.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          "$HOME/.local/bin/uv" tool install ruff
+          "$HOME/.local/bin/uv" tool install semgrep
+          npm install -g opencode-ai
+
+      - name: Execute continuous multi-repo security patrol and autonomous patching
+        run: |
+          WORK_DIR="$RUNNER_TEMP/security-patrol"
+          mkdir -p "$WORK_DIR"
+          REPOS=$(gh repo list "$OWNER" --limit 100 --json name --jq '.[].name')
+          for REPO in $REPOS; do
+            echo "=== Auditing $OWNER/$REPO ==="
+            TARGET="$WORK_DIR/$REPO"
+            gh repo clone "$OWNER/$REPO" "$TARGET" -- --depth 1 || continue
+            cd "$TARGET"
+            git config user.name "Baysoz CISO Patrol"
+            git config user.email "baysozlabs@proton.me"
+
+            NEEDS_FIX=0
+            ruff check --select S . > "$WORK_DIR/ruff.log" 2>&1 || NEEDS_FIX=1
+            semgrep --config p/default --error . > "$WORK_DIR/semgrep.log" 2>&1 || NEEDS_FIX=1
+
+            if [ "$NEEDS_FIX" -eq 1 ]; then
+              echo "Security findings detected in $REPO; deploying CISO remediation agent..."
+              cat << 'PROMPT' > "$WORK_DIR/remediate.txt"
+          You are the Chief Information Security Officer (CISO) of Baysoz Technology Holdings.
+          Audit findings were detected in this repository by Ruff Security (`--select S`) and/or Semgrep.
+          1. Inspect all source files and fix every security vulnerability, secret exposure, injection vector, or unsafe pattern.
+          2. Verify zero findings remain via `ruff check --select E,F,W,S,B .` and `semgrep --config p/default --error .`.
+          3. Run existing test suites (`uv run pytest` or `pytest`) to guarantee zero regressions.
+          PROMPT
+              opencode run --auto --model "$OPENCODE_MODEL" --dir "$TARGET" "$(cat "$WORK_DIR/remediate.txt")"
+              if [ -n "$(git status --porcelain)" ]; then
+                git add -A
+                git commit -m "fix(security): autonomous CISO remediation patch"
+                git push origin HEAD
+              fi
+            fi
+          done
