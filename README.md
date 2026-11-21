@@ -115,6 +115,7 @@ envlens scan . --format markdown >> "$GITHUB_STEP_SUMMARY"
 | Otomatik üretilen proje | Açıklama |
 | :--- | :--- |
 | [baysoz-logmask](https://github.com/yazilimbaysoz-svg/baysoz-logmask) | Log'lardaki PII ve sırları doğrulanmış desenlerle maskeleyen bağımlılıksız CLI. Stack: `Python 3.12, uv, pytest, ruff, semgrep`. |
+| [envpair](https://github.com/yazilimbaysoz-svg/envpair) | .env dosyaları arasındaki yapılandırma farklarını, eksik anahtarları ve hataları denetleyen hafif bir Python CLI aracı. Stack: `Python 3.12, uv, pytest, ruff`. |
 <!-- FACTORY:END -->
 
 ---
