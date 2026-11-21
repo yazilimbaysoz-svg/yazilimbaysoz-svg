@@ -61,7 +61,8 @@ flowchart TD
 | Proje | Açıklama |
 | :--- | :--- |
 | [**sec-audit-cli**](https://github.com/yazilimbaysoz-svg/sec-audit-cli) | **Vitrin projesi.** Tek komutla gizli anahtar, zafiyetli paket ve OWASP riski tarayan; sıfır çalışma zamanı bağımlılığıyla çalışan Python CLI. Renkli terminal raporu, deterministik JSON çıktısı, maskelenmiş bulgular ve CI eşikleri sunar. |
-| [**envlens**](https://github.com/yazilimbaysoz-svg/envlens) | **Yeni:** Ortam değişkenlerine x-ray. Kod, `.env`, Docker Compose, Dockerfile ve GitHub Actions'ı çapraz tarayıp eksik key, sızdırılmış sır, config drift ve kullanılmayan template değerlerini deploy öncesi yakalar. 10+ dil, JSON/Markdown rapor, CI eşikleri ve sıfır runtime bağımlılığı. |
+| [**envlens**](https://github.com/yazilimbaysoz-svg/envlens) | Ortam değişkenlerine x-ray. Kod, `.env`, Docker Compose, Dockerfile ve GitHub Actions'ı çapraz tarayıp eksik key, sızdırılmış sır, config drift ve kullanılmayan template değerlerini deploy öncesi yakalar. 10+ dil, JSON/Markdown rapor, CI eşikleri ve sıfır runtime bağımlılığı. |
+| [**redos-lint**](https://github.com/yazilimbaysoz-svg/redos-lint) | **Yeni vitrin projesi.** Regex kalıplarında ReDoS (catastrophic backtracking) riskini pattern'i çalıştırmadan tespit eden, sıfır runtime bağımlılıklı Python CLI. Python/JS/TS kaynak tarama, `file:line` bazlı CRITICAL/HIGH/MEDIUM bulgular, JSON/Markdown rapor ve `--fail-on` CI kapısı. |
 | [**baysoz-zero-trust-engine**](https://github.com/yazilimbaysoz-svg/baysoz-zero-trust-engine) | Rust kriptografik komut kalkanı ve Python tabanlı KVKK/GDPR uyumlu PII temizleme motoru. |
 | [**baysoz-polyglot-math-orchestrator**](https://github.com/yazilimbaysoz-svg/baysoz-polyglot-math-orchestrator) | Gecikme, bellek güvenliği ve eşzamanlılığa göre dil seçimi yapan deterministik matematik motoru. |
 | [**Lavox-Elektronik-Kurumsal-ERP**](https://github.com/yazilimbaysoz-svg/Lavox-Elektronik-Kurumsal-ERP) | Kurumsal ERP alanında üretilen iş uygulaması. |
@@ -88,6 +89,18 @@ envlens scan . --format markdown >> "$GITHUB_STEP_SUMMARY"
 
 `MISSING`, `UNDECLARED`, `STALE`, `LEAK` ve `DRIFT` kuralları; 10+ dil, GitHub Actions
 `${{ secrets.X }}` referansları ve deterministik table/JSON/Markdown raporları.
+
+### redos-lint — hızlı bakış
+
+```bash
+uv tool install redos-lint
+redos-lint check '^(a+)+$'
+redos-lint scan . --fail-on high
+```
+
+Regex'i çalıştırmadan AST üzerinde çalışır: iç içe tekrar, örtüşen alternasyon, yan yana
+quantifier ve backreference risklerini saniyeler içinde raporlar. Telemetri yok, ağ yok,
+Python 3.11+ ve tek bağımlılık bile yok.
 
 ---
 
