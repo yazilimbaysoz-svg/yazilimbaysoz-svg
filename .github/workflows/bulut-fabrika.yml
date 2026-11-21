@@ -1,4 +1,4 @@
-name: Bulut Fabrika
+name: Baysoz Cloud Workforce
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: bulut-fabrika
+  group: baysoz-cloud-workforce
   cancel-in-progress: false
 
 env:
@@ -17,151 +17,105 @@ env:
   PROFILE_REPO: yazilimbaysoz-svg/yazilimbaysoz-svg
   GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
   GITHUB_TOKEN: ${{ github.token }}
-  HAS_PUBLISH_TOKEN: ${{ secrets.GH_TOKEN != '' }}
   OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
   ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
   OPENCODE_MODEL: ${{ vars.OPENCODE_MODEL || 'opencode/big-pickle' }}
 
 jobs:
-  uret-ve-yayinla:
-    name: Yeni acik kaynak projeyi uret, test et, yayinla
+  cloud-division-production:
+    name: Division (${{ matrix.division }})
     runs-on: ubuntu-latest
     timeout-minutes: 55
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        division:
+          - appsec-redteam
+          - devops-platform
+          - systems-observability
 
     steps:
-      - name: Profil reposunu checkout
+      - name: Checkout showcase repository
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
           token: ${{ env.GH_TOKEN }}
 
-      - name: Python 3.12
+      - name: Setup Python 3.12
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Node (opencode CLI icin)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: uv kur
+      - name: Provision autonomous tooling (uv, ruff, semgrep, opencode)
         run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          curl -LsSf https://astral.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          "$HOME/.local/bin/uv" tool install ruff
+          "$HOME/.local/bin/uv" tool install semgrep
+          npm install -g opencode-ai
 
-      - name: ruff ve semgrep kur
+      - name: Sync live GitHub organization inventory
         run: |
-          uv tool install ruff
-          uv tool install semgrep
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
-          ruff --version
-          semgrep --version
+          gh repo list "$OWNER" --limit 100 --json name,description > "$RUNNER_TEMP/existing-repos.json"
 
-      - name: opencode CLI kur
-        run: |
-          curl -fsSL https://opencode.ai/install | bash -s -- --version 1.19.6 --no-modify-path
-          export PATH="$HOME/.opencode/bin:$PATH"
-          command -v opencode
-          opencode --version
-
-      - name: opencode yapilandirmasini olustur
-        run: |
-          mkdir -p "$HOME/.config/opencode"
-          cat > "$HOME/.config/opencode/opencode.json" <<'JSON'
-          {
-            "$schema": "https://opencode.ai",
-            "model": "opencode/big-pickle",
-            "permission": "allow"
-          }
-          JSON
-          cat "$HOME/.config/opencode/opencode.json"
-
-      - name: Gerekli kimlik bilgilerini dogrula
-        run: |
-          if [ "$HAS_PUBLISH_TOKEN" != "true" ]; then
-            echo "::error::GH_TOKEN secret'i yok. Yeni repo olusturmak icin repo scope'lu classic PAT gereklidir."
-            exit 1
-          fi
-          if [[ "$OPENCODE_MODEL" == opencode/* ]]; then
-            echo "Ucretsiz opencode modeli: $OPENCODE_MODEL - harici LLM API anahtari gerekmez."
-          elif [ -z "$OPENROUTER_API_KEY$ANTHROPIC_API_KEY$OPENAI_API_KEY" ]; then
-            echo "::error::Ucretsiz olmayan model ($OPENCODE_MODEL) icin OPENROUTER_API_KEY, ANTHROPIC_API_KEY veya OPENAI_API_KEY secret'lerinden biri gereklidir."
-            exit 1
-          fi
-          gh auth status
-          git config --global user.name "BAYSOZ BULUT FABRIKA"
-          git config --global user.email "ci@baysozyazilim.local"
-
-      - name: Mevcut repolari tespit et
-        run: |
-          gh repo list "$OWNER" --limit 100 --json name -q '.[].name' > "$RUNNER_TEMP/mevcut-repoler.txt"
-          wc -l < "$RUNNER_TEMP/mevcut-repoler.txt"
-
-      - name: Uretim gorevini hazirla
+      - name: Execute Baysoz Software Corp. division pipeline
         env:
-          FACTORY_DIR: ${{ runner.temp }}/baysoz-yeni-proje
+          FACTORY_DIR: ${{ runner.temp }}/baysoz-new-project
+          EXISTING_REPOS_PATH: ${{ runner.temp }}/existing-repos.json
           RESULT_FILE: ${{ github.workspace }}/.factory-result.json
+          DIVISION: ${{ matrix.division }}
         run: |
           mkdir -p "$FACTORY_DIR"
-          cat > "$RUNNER_TEMP/gorev.txt" <<'PROMPT'
-          Sen BAYSOZ YAZILIM'in tam yetkili otonom bas muhendisisin. Bu gorevi hicbir onay beklemeden bastan sona tamamla.
-
-          Baglam:
-          - Calisma dizinin: FACTORY_DIR_PATH
-          - Mevcut repolarin listesi: EXISTING_REPOS_PATH (bu dosyadaki hicbir isimle ayni isimde proje uretme)
-          - Profil reposu: yazilimbaysoz-svg/yazilimbaysoz-svg
-          - GitHub kimlik bilgisi GH_TOKEN env degiskeninde; gh zaten yetkili.
-
-          Gorev:
-          1. FACTORY_DIR_PATH icinde, gercek bir problemi cozen, herkesin kullanabilecegi yeni bir acik kaynak proje tasarla ve uret. Python 3.12 + uv kullan; sifir agir servis, sifir yerel LLM. Proje en az sunlari icersin: pyproject.toml, README.md (kurulum + ornek + mimari), MIT LICENSE, src/ altinda modul, tests/ altinda gercek testler, .gitignore.
-          2. Kalite kapilari: uv venv && uv pip install -e . && uv pip install pytest && uv run pytest -q && ruff check . && semgrep scan --config p/default . komutlarini calistir. Hata varsa kodu duzelt ve tum kontroller yesil olana kadar tekrarla. Semgrep bulgularini da gercekten duzelt.
-          3. gh repo create yazilimbaysoz-svg/<proje-slug> --public --source=. --remote=origin --push ile yayinla. Proje aciklamasini da ekle. Sikisik slug kullan; mevcut repolarla cakisma olmasin.
-          4. Profil reposunun kokune RESULT_FILE_PATH yoluna sadece gecerli JSON yaz: {"name":"<repo adi>","description":"<kisa Turkce aciklama>","url":"<GitHub URL>","highlights":["<ozellik>","<ozellik>"],"stack":["<teknoloji>"]}. Baska dosya yazma, README'ye dokunma, secret degerlerini hicbir yere yazma.
-          5. Son mesajinda uretilen projenin adini ve URL'sini kisaca bildir.
+          cat << 'PROMPT' > "$RUNNER_TEMP/directive.txt"
+          You are an autonomous Principal Engineering Division ($DIVISION) operating under Baysoz Technology Holdings & Baysoz Software Corp.
+          Execute end-to-end without questions or confirmation:
+          1. Inspect $EXISTING_REPOS_PATH and live GitHub trends via `gh search repos`. Architect a novel, high-star, non-overlapping open-source Python 3.12+ CLI/library tailored to the `$DIVISION` domain inside $FACTORY_DIR (use `uv`, zero heavy services, zero local LLMs). Include `pyproject.toml`, `README.md` (badges + install + architecture + real CLI output), MIT `LICENSE`, `src/` modular package, `tests/` adversarial test suite, `.github/workflows/ci.yml`, and `.gitignore`.
+          2. Enforce zero-defect quality gates: `uv venv && uv pip install -e . && uv pip install pytest && uv run pytest -q && ruff check . && semgrep --config p/default .`. Iterate until all tests pass and static/security gates report zero findings.
+          3. Publish via `gh repo create yazilimbaysoz-svg/<project-slug> --public --source=. --remote=origin --push` with a crisp description and topics.
+          4. Write strictly valid JSON to $RESULT_FILE: {"name":"<project-slug>","description":"<concise English description>","url":"<GitHub URL>","highlights":["<feature-1>","<feature-2>"],"stack":["Python","<lib>"]}. Do not touch any other files in the showcase workspace.
           PROMPT
-          sed -i "s|FACTORY_DIR_PATH|$FACTORY_DIR|g; s|EXISTING_REPOS_PATH|$RUNNER_TEMP/mevcut-repoler.txt|g; s|RESULT_FILE_PATH|$RESULT_FILE|g" "$RUNNER_TEMP/gorev.txt"
+          sed -i "s|\$DIVISION|$DIVISION|g; s|\$FACTORY_DIR|$FACTORY_DIR|g; s|\$EXISTING_REPOS_PATH|$EXISTING_REPOS_PATH|g; s|\$RESULT_FILE|$RESULT_FILE|g" "$RUNNER_TEMP/directive.txt"
+          opencode run --auto --model "$OPENCODE_MODEL" --dir "$FACTORY_DIR" "$(cat "$RUNNER_TEMP/directive.txt")"
 
-      - name: opencode ile projeyi uret, test et ve yayinla
-        env:
-          FACTORY_DIR: ${{ runner.temp }}/baysoz-yeni-proje
+      - name: Update showcase README
         run: |
-          opencode run --auto --model "$OPENCODE_MODEL" --dir "$FACTORY_DIR" "$(cat "$RUNNER_TEMP/gorev.txt")"
-
-      - name: Vitrin README'sini guncelle
-        run: |
-          python - <<'PY'
-          import json
-          import pathlib
-
+          python - << 'PY'
+          import json, pathlib
           root = pathlib.Path.cwd()
-          result = json.loads((root / ".factory-result.json").read_text(encoding="utf-8"))
+          res_path = root / ".factory-result.json"
+          if not res_path.exists():
+              raise SystemExit("Missing .factory-result.json")
+          result = json.loads(res_path.read_text(encoding="utf-8"))
           name = result["name"]
           description = result["description"].replace("|", "/")
           url = result["url"]
-          stack = ", ".join(result.get("stack", [])) or "Python"
-          row = f"| [{name}]({url}) | {description} Stack: `{stack}`. |\n"
-
+          stack = ", ".join(result.get("stack", ["Python"]))
+          row = f"| [{name}]({url}) | {description} | Stack: `{stack}` |\n"
           readme = root / "README.md"
           text = readme.read_text(encoding="utf-8")
-          start = "<!-- FACTORY:START -->"
-          end = "<!-- FACTORY:END -->"
+          start, end = "<!-- FACTORY:START -->", "<!-- FACTORY:END -->"
           head, rest = text.split(start, 1)
           body, tail = rest.split(end, 1)
           if name not in body:
               body = body + row
           readme.write_text(head + start + body + end + tail, encoding="utf-8")
+          res_path.unlink(missing_ok=True)
           PY
 
-      - name: Vitrin degisikligini commit ve push et
+      - name: Commit and push showcase update
         run: |
+          git config user.name "Baysoz Automation"
+          git config user.email "baysozlabs@proton.me"
           git add README.md
           git diff --cached --quiet && exit 0
-          git commit -m "chore(factory): yeni acik kaynak projeyi vitrine ekle"
+          git commit -m "chore(cloud-workforce): publish new ${DIVISION} release"
+          git pull --rebase origin main
           git push origin HEAD:main
-
-      - name: Ozet
-        run: |
-          python -c "import json; d=json.load(open('.factory-result.json')); print('Yayinlanan proje:', d['url'])"
