@@ -129,6 +129,7 @@ Python 3.11+ ve tek bağımlılık bile yok.
 | :--- | :--- |
 | [baysoz-logmask](https://github.com/yazilimbaysoz-svg/baysoz-logmask) | Log'lardaki PII ve sırları doğrulanmış desenlerle maskeleyen bağımlılıksız CLI. Stack: `Python 3.12, uv, pytest, ruff, semgrep`. |
 | [envpair](https://github.com/yazilimbaysoz-svg/envpair) | .env dosyaları arasındaki yapılandırma farklarını, eksik anahtarları ve hataları denetleyen hafif bir Python CLI aracı. Stack: `Python 3.12, uv, pytest, ruff`. |
+| [baysoz-cardinalis](https://github.com/yazilimbaysoz-svg/baysoz-cardinalis) | Cardinality risk gate for OpenTelemetry and Prometheus telemetry with HLL++ estimation, unbounded-label detection, collector audits, and SARIF CI reports. | Stack: `Python, PyYAML, uv` |
 <!-- FACTORY:END -->
 
 ---
