@@ -33,8 +33,6 @@ jobs:
         run: |
           curl -LsSf https://astral.sh | sh
           echo "$HOME/.local/bin" >> $GITHUB_PATH
-          "$HOME/.local/bin/uv" tool install ruff
-          "$HOME/.local/bin/uv" tool install semgrep
           npm install -g opencode-ai
 
       - name: Execute continuous multi-repo security patrol and autonomous patching

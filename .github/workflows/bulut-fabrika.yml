@@ -29,7 +29,7 @@ jobs:
     timeout-minutes: 55
     strategy:
       fail-fast: false
-      max-parallel: 1
+      max-parallel: 3
       matrix:
         division:
           - appsec-redteam
@@ -58,8 +58,6 @@ jobs:
         run: |
           curl -LsSf https://astral.sh | sh
           echo "$HOME/.local/bin" >> $GITHUB_PATH
-          "$HOME/.local/bin/uv" tool install ruff
-          "$HOME/.local/bin/uv" tool install semgrep
           npm install -g opencode-ai
 
       - name: Sync live GitHub organization inventory
