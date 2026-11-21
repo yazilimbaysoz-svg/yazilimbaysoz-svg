@@ -47,12 +47,12 @@ jobs:
       - name: Setup Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.13"
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Provision autonomous tooling (uv, ruff, semgrep, opencode)
         run: |
@@ -75,7 +75,7 @@ jobs:
           cat << 'PROMPT' > "$RUNNER_TEMP/directive.txt"
           You are an autonomous Principal Engineering Division ($DIVISION) at Baysöz Labs (baysozlabs@proton.me | https://github.com).
           Execute end-to-end without questions or confirmation:
-          1. Deeply inspect $EXISTING_REPOS_PATH and mine live GitHub trends, open issues, and ecosystem pain points via `gh search repos` and `gh search issues`. Trivial, redundant, or toy utilities are STRICTLY FORBIDDEN. Select a genuinely needed, high-star open-source Python 3.12+ CLI/library tailored to `$DIVISION` inside $FACTORY_DIR (use `uv`, zero heavy services, zero local LLMs).
+          1. Deeply inspect $EXISTING_REPOS_PATH and mine live GitHub trends, open issues, and ecosystem pain points via `gh search repos` and `gh search issues`. Trivial, redundant, or toy utilities are STRICTLY FORBIDDEN. Select a genuinely needed, high-star open-source cutting-edge 2026-2027 Rust, Go, C++23, or Python 3.13+ deep production CLI/library tailored to `$DIVISION` inside $FACTORY_DIR (use `uv`, zero heavy services, zero local LLMs).
           2. Enforce strict enterprise folder structure and documentation: `docs/MARKET_RESEARCH.md` (deep ecosystem justification), `docs/ARCHITECTURE.md`, `PLAN.md`, `SECURITY.md`, `CHANGELOG.md`, `README.md` (badges + install + architecture + real CLI output), MIT `LICENSE`, `pyproject.toml`, `.github/workflows/ci.yml`, `.gitignore`, `src/<pkg>/`, and `tests/`.
           3. Every public file, `pyproject.toml`, `LICENSE`, `README.md`, and CLI `--version`/`--help` output MUST explicitly attribute **Baysöz Labs** (`baysozlabs@proton.me`). Never use legal entity suffixes like Holding or Corp.
           4. Enforce zero-defect quality gates: `uv venv && uv pip install -e . && uv pip install pytest && uv run pytest -q && ruff check --select E,F,W,S,B . && semgrep --config p/default --error .`. Iterate until all tests pass and static/security gates report zero findings.
