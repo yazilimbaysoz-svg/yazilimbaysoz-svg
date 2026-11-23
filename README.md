@@ -133,6 +133,7 @@ Python 3.11+ ve tek bağımlılık bile yok.
 | [baysoz-otelgate](https://github.com/yazilimbaysoz-svg/baysoz-otelgate) | Static policy gate and semantic linter for OpenTelemetry Collector configs with security checks and SARIF output. | Stack: `Python, PyYAML` |
 | [baysoz-routegate](https://github.com/yazilimbaysoz-svg/baysoz-routegate) | Offline Kubernetes Gateway API route-conflict and shadowing gate with deterministic precedence resolution and SARIF CI enforcement — Baysöz Labs <baysozlabs@proton.me> | Stack: `Python, PyYAML, uv` |
 | [baysoz-desyncforge](https://github.com/yazilimbaysoz-svg/baysoz-desyncforge) | Deterministic HTTP/1.1 request-smuggling differential-parser oracle and SARIF CI gate by Baysöz Labs <baysozlabs@proton.me> | Stack: `Python, Click` |
+| [baysoz-queryoracle](https://github.com/yazilimbaysoz-svg/baysoz-queryoracle) | Deterministic offline PromQL conformance oracle with fixture evaluation, backend portability profiles, cost linting and SARIF CI gates, by Baysöz Labs <baysozlabs@proton.me>. | Stack: `Python, stdlib, PromQL, SARIF 2.1.0` |
 <!-- FACTORY:END -->
 
 ---
