@@ -134,6 +134,7 @@ Python 3.11+ ve tek bağımlılık bile yok.
 | [baysoz-routegate](https://github.com/yazilimbaysoz-svg/baysoz-routegate) | Offline Kubernetes Gateway API route-conflict and shadowing gate with deterministic precedence resolution and SARIF CI enforcement — Baysöz Labs <baysozlabs@proton.me> | Stack: `Python, PyYAML, uv` |
 | [baysoz-desyncforge](https://github.com/yazilimbaysoz-svg/baysoz-desyncforge) | Deterministic HTTP/1.1 request-smuggling differential-parser oracle and SARIF CI gate by Baysöz Labs <baysozlabs@proton.me> | Stack: `Python, Click` |
 | [baysoz-queryoracle](https://github.com/yazilimbaysoz-svg/baysoz-queryoracle) | Deterministic offline PromQL conformance oracle with fixture evaluation, backend portability profiles, cost linting and SARIF CI gates, by Baysöz Labs <baysozlabs@proton.me>. | Stack: `Python, stdlib, PromQL, SARIF 2.1.0` |
+| [baysoz-mcpcontract](https://github.com/yazilimbaysoz-svg/baysoz-mcpcontract) | Deterministic offline MCP tool-contract conformance, portability and drift gate with SARIF CI enforcement by Baysöz Labs <baysozlabs@proton.me> | Stack: `Python, stdlib` |
 <!-- FACTORY:END -->
 
 ---
