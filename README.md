@@ -136,6 +136,7 @@ Python 3.11+ ve tek bağımlılık bile yok.
 | [baysoz-queryoracle](https://github.com/yazilimbaysoz-svg/baysoz-queryoracle) | Deterministic offline PromQL conformance oracle with fixture evaluation, backend portability profiles, cost linting and SARIF CI gates, by Baysöz Labs <baysozlabs@proton.me>. | Stack: `Python, stdlib, PromQL, SARIF 2.1.0` |
 | [baysoz-mcpcontract](https://github.com/yazilimbaysoz-svg/baysoz-mcpcontract) | Deterministic offline MCP tool-contract conformance, portability and drift gate with SARIF CI enforcement by Baysöz Labs <baysozlabs@proton.me> | Stack: `Python, stdlib` |
 | [baysoz-gqlcostgate](https://github.com/yazilimbaysoz-svg/baysoz-gqlcostgate) | Offline GraphQL cost, depth, batching and authorization oracle with deterministic SARIF CI gates and a bounded adversarial probe forge by Baysöz Labs <baysozlabs@proton.me> | Stack: `Python, graphql-core, uv` |
+| [baysoz-ssrfcanon](https://github.com/yazilimbaysoz-svg/baysoz-ssrfcanon) | Offline SSRF guard differential oracle for URL/IP canonicalization across parser profiles, with an adversarial bypass corpus and deterministic SARIF CI gates | Stack: `Python, pytest, hatchling` |
 <!-- FACTORY:END -->
 
 ---
