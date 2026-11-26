@@ -1,0 +1,27 @@
+ASSET PASS | vendor three.js sha256 | bytes=669884, sha256=170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa
+ASSET PASS | vendor three.js SRI | computed=sha384-qOkzR5Ke/XkQxuGVJ9hpFEpDlcoLtWwVYhnJf06cLIZa2vaIptSqaubivErzmD5O
+ASSET PASS | three.js license sha256 | bytes=1081, sha256=852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d
+ASSET PASS | three.js license text | MIT license with three.js copyright present
+ASSET PASS | N2Mobil official bytes and dimensions | bytes=2427, 190x45, colorType=3
+ASSET PASS | Lavox derivative bytes and dimensions | bytes=71581, 640x330, colorType=6
+ASSET PASS | authored SVG fallbacks are well formed | N2Mobil and Lavox SVG tag stacks closed
+ASSET PASS | authored SVG fallbacks are identified as non-official | title and desc present in both fallbacks
+ASSET PASS | authored SVG fallbacks carry no inline handlers | count=0
+ASSET PASS | provenance metadata complete | schema=naztech.logo-provenance/1.1, entries=2
+ASSET PASS | provenance hashes match shipped assets | metadata hash chain verified
+ASSET PASS | provenance source URLs exact | official HTTPS source URLs recorded
+ASSET PASS | two seamless marquee groups | groups=2, order=hikvision,n2mobil,lavox
+ASSET FAIL | marquee groups identical apart from decorative alt | identical=false
+ASSET PASS | second marquee group aria-hidden | decorative duplicate hidden from assistive technology
+ASSET FAIL | four real partner logo images | images=0
+ASSET FAIL | decorative duplicate logo alt text empty | two descriptive and two empty alt attributes
+ASSET PASS | disclaimer and Baysöz attribution visible | exact provenance disclaimer rendered
+ASSET FAIL | classic deferred script order | order=matrix.js -> hizmet-detay.js -> tezweb-3d.js -> webgl-3d-viewer.js -> security-shield.js
+ASSET PASS | no page-load Three.js script | vendor build is injected only on catalog open
+ASSET PASS | HTML free of inline handlers | count=0
+ASSET PASS | CSS provides logo chips and WebGL panel | all required style hooks present
+ASSET PASS | viewer declares both CDN sources with SRI | cdnjs -> unpkg -> local failover declared
+ASSET PASS | shipped JavaScript is free of placeholders and console.error | no placeholders and no error-channel writes
+ASSET PASS | shipped files free of local identity | no absolute local paths
+ASSET_TOTAL=25 PASS=21 FAIL=4
+ASSET_VERDICT: 21/25 PASS

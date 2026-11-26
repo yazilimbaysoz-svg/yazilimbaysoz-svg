@@ -1,0 +1,14 @@
+<svg xmlns="http://w3.org" viewBox="0 0 1600 900" width="1600" height="900">
+  <rect width="1600" height="900" fill="#080b12"/>
+  <rect x="36" y="36" width="1528" height="828" rx="22" fill="#0d1320" stroke="#d4af37" stroke-width="4"/>
+  <line x1="36" y1="155" x2="1564" y2="155" stroke="#d4af37" stroke-width="2"/>
+  <text x="84" y="114" font-family="Arial,sans-serif" font-weight="900" font-size="40" fill="#d4af37" letter-spacing="3">NAZTECH BILISIM</text>
+  <text x="1516" y="114" text-anchor="end" font-family="Arial,sans-serif" font-weight="900" font-style="italic" font-size="42" fill="#E60012" letter-spacing="2">HIKVISION</text>
+  <rect x="84" y="210" width="520" height="52" rx="26" fill="#1b2234" stroke="#d4af37" stroke-width="2"/>
+  <text x="344" y="244" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="22" fill="#f5d77f" letter-spacing="2">2026 - 2027 KURUMSAL COZUM</text>
+  <text x="84" y="360" font-family="Arial,sans-serif" font-weight="900" font-size="48" fill="#ffffff">Kurumsal Ic Mekan Dome ve PTZ Cozumleri</text>
+  <rect x="84" y="425" width="1432" height="145" rx="18" fill="#121928" stroke="#E60012" stroke-width="3"/>
+  <text x="124" y="508" font-family="Arial,sans-serif" font-weight="600" font-size="28" fill="#e2e8f0">IK10 Darbe Dayanimli Kubbe - Genis Acili WDR Lens - 7/24 Akilli Izleme</text>
+  <text x="84" y="805" font-family="Arial,sans-serif" font-weight="700" font-size="24" fill="#94a3b8" letter-spacing="2">KARAKOPRU / SANLIURFA</text>
+  <text x="1516" y="805" text-anchor="end" font-family="Arial,sans-serif" font-weight="700" font-size="24" fill="#d4af37" letter-spacing="2">0553 034 18 94  |  NAZTECHBILISIM.COM</text>
+</svg>

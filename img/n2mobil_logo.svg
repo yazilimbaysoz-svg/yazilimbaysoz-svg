@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 45" role="img" aria-labelledby="n2Title n2Desc">
+  <title id="n2Title">Yerel olarak hazırlanmış, resmî olmayan N2Mobil yedek logosu (non-official local fallback)</title>
+  <desc id="n2Desc">Resmî olmayan, yerel olarak çizilmiş yaklaşık yedek görsel. Resmî marka N2Mobil'e aittir; bu dosya yalnızca tanımlama amacıyla kullanılır (locally authored non-official fallback approximation).</desc>
+  <rect x="1" y="1" width="188" height="43" rx="9" fill="#0B1F3A" />
+  <rect x="5" y="5" width="40" height="35" rx="7" fill="#0B1F3A" stroke="#E93B77" stroke-width="1.5" />
+  <g fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 30V15l7 10 7-10v15" stroke="#FFFFFF" />
+    <path d="M26 30V15h4c4.5 0 7.4 2.3 7.4 5.8s-2.9 5.8-7.4 5.8h-2" stroke="#E93B77" />
+  </g>
+  <g font-family="Inter, 'Segoe UI', Arial, sans-serif" font-weight="800">
+    <text x="52" y="27" fill="#FFFFFF" font-size="22" letter-spacing="-0.5">N2</text>
+    <text x="52" y="40" fill="#FFFFFF" font-size="9" letter-spacing="5">MOBİL</text>
+  </g>
+</svg>

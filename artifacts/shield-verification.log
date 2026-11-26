@@ -1,0 +1,125 @@
+PREFLIGHT PASS | node --check hizmet-detay.js | syntax OK
+PREFLIGHT PASS | node --check tezweb-3d.js | syntax OK
+PREFLIGHT PASS | node --check webgl-3d-viewer.js | syntax OK
+PREFLIGHT PASS | node --check realistic-3d-models.js | syntax OK
+PREFLIGHT PASS | node --check security-shield.js | syntax OK
+PREFLIGHT PASS | index.html scrubbed comments | no machine-authored comments
+PREFLIGHT PASS | style.css scrubbed comments | no machine-authored comments
+PREFLIGHT PASS | hizmet-detay.js scrubbed comments | no machine-authored comments
+PREFLIGHT PASS | tezweb-3d.js scrubbed comments | no machine-authored comments
+PREFLIGHT PASS | webgl-3d-viewer.js scrubbed comments | no machine-authored comments
+PREFLIGHT PASS | realistic-3d-models.js scrubbed comments | no machine-authored comments
+PREFLIGHT PASS | security-shield.js scrubbed comments | no machine-authored comments
+PREFLIGHT PASS | CSS balanced braces | 242/242
+PREFLIGHT PASS | CSS no !important | declaration absent
+PREFLIGHT PASS | CSS scan sweep keyframes | 1.5s animation present
+PREFLIGHT PASS | HTML download center | section present
+PREFLIGHT PASS | HTML three download triggers | count=3
+PREFLIGHT PASS | HTML scan modal | modal present
+PREFLIGHT PASS | HTML security shield linked | classic deferred script present
+PREFLIGHT PASS | HTML sponsor SVG logos | inline SVG and N2MOBIL showcase present
+PREFLIGHT PASS | Shield keyboard blocks | all shortcuts present
+PREFLIGHT PASS | Shield drag block | image drag handlers present
+PREFLIGHT PASS | Shield scan duration | 1500ms constant present
+RUN 051 PASS | class=download-escape | errors=0 | scan=escape; opened=0
+RUN 099 PASS | class=download-escape | errors=0 | scan=escape; opened=0
+RUN 031 PASS | class=keyboard-allow | errors=0 | ordinary-keys=allowed
+RUN 064 PASS | class=invalid-url | errors=0 | url=rejected; modal=hidden
+RUN 034 PASS | class=showcase | errors=0 | showcase=catalog-5
+RUN 018 PASS | class=keyboard-block | errors=0 | shortcuts=4/4 blocked
+RUN 009 PASS | class=plain-drag | errors=0 | plain-drag=allowed
+RUN 084 PASS | class=scan-guards | errors=0 | guards=double-start rejected
+RUN 056 PASS | class=image-drag | errors=0 | image-drag=3/3 blocked
+RUN 093 PASS | class=plain-drag | errors=0 | plain-drag=allowed
+RUN 005 PASS | class=contextmenu | errors=0 | contextmenu=blocked
+RUN 011 PASS | class=comment-scrub | errors=0 | scrub=1 removed, 1 retained
+RUN 096 PASS | class=scan-guards | errors=0 | guards=double-start rejected
+RUN 100 PASS | class=invalid-url | errors=0 | url=rejected; modal=hidden
+RUN 097 PASS | class=download-complete | errors=0 | scan=complete; opened=1; duration=1500ms
+RUN 095 PASS | class=comment-scrub | errors=0 | scrub=1 removed, 1 retained
+RUN 037 PASS | class=download-complete | errors=0 | scan=complete; opened=1; duration=1500ms
+RUN 015 PASS | class=download-escape | errors=0 | scan=escape; opened=0
+RUN 010 PASS | class=showcase | errors=0 | showcase=catalog-5
+RUN 068 PASS | class=image-drag | errors=0 | image-drag=3/3 blocked
+RUN 080 PASS | class=image-drag | errors=0 | image-drag=3/3 blocked
+RUN 088 PASS | class=invalid-url | errors=0 | url=rejected; modal=hidden
+RUN 089 PASS | class=contextmenu | errors=0 | contextmenu=blocked
+RUN 067 PASS | class=keyboard-allow | errors=0 | ordinary-keys=allowed
+RUN 028 PASS | class=invalid-url | errors=0 | url=rejected; modal=hidden
+RUN 050 PASS | class=download-cancel | errors=0 | scan=cancelled; opened=0
+RUN 001 PASS | class=download-complete | errors=0 | scan=complete; opened=1; duration=1500ms
+RUN 041 PASS | class=contextmenu | errors=0 | contextmenu=blocked
+RUN 008 PASS | class=image-drag | errors=0 | image-drag=3/3 blocked
+RUN 020 PASS | class=image-drag | errors=0 | image-drag=3/3 blocked
+RUN 060 PASS | class=scan-guards | errors=0 | guards=double-start rejected
+RUN 054 PASS | class=keyboard-block | errors=0 | shortcuts=4/4 blocked
+RUN 032 PASS | class=image-drag | errors=0 | image-drag=3/3 blocked
+RUN 025 PASS | class=download-complete | errors=0 | scan=complete; opened=1; duration=1500ms
+RUN 086 PASS | class=download-cancel | errors=0 | scan=cancelled; opened=0
+RUN 072 PASS | class=scan-guards | errors=0 | guards=double-start rejected
+RUN 024 PASS | class=scan-guards | errors=0 | guards=double-start rejected
+RUN 017 PASS | class=contextmenu | errors=0 | contextmenu=blocked
+RUN 079 PASS | class=keyboard-allow | errors=0 | ordinary-keys=allowed
+RUN 002 PASS | class=download-cancel | errors=0 | scan=cancelled; opened=0
+RUN 029 PASS | class=contextmenu | errors=0 | contextmenu=blocked
+RUN 036 PASS | class=scan-guards | errors=0 | guards=double-start rejected
+RUN 014 PASS | class=download-cancel | errors=0 | scan=cancelled; opened=0
+RUN 094 PASS | class=showcase | errors=0 | showcase=catalog-5
+RUN 090 PASS | class=keyboard-block | errors=0 | shortcuts=4/4 blocked
+RUN 071 PASS | class=comment-scrub | errors=0 | scrub=1 removed, 1 retained
+RUN 035 PASS | class=comment-scrub | errors=0 | scrub=1 removed, 1 retained
+RUN 021 PASS | class=plain-drag | errors=0 | plain-drag=allowed
+RUN 040 PASS | class=invalid-url | errors=0 | url=rejected; modal=hidden
+RUN 007 PASS | class=keyboard-allow | errors=0 | ordinary-keys=allowed
+RUN 066 PASS | class=keyboard-block | errors=0 | shortcuts=4/4 blocked
+RUN 012 PASS | class=scan-guards | errors=0 | guards=double-start rejected
+RUN 077 PASS | class=contextmenu | errors=0 | contextmenu=blocked
+RUN 055 PASS | class=keyboard-allow | errors=0 | ordinary-keys=allowed
+RUN 016 PASS | class=invalid-url | errors=0 | url=rejected; modal=hidden
+RUN 004 PASS | class=invalid-url | errors=0 | url=rejected; modal=hidden
+RUN 081 PASS | class=plain-drag | errors=0 | plain-drag=allowed
+RUN 073 PASS | class=download-complete | errors=0 | scan=complete; opened=1; duration=1500ms
+RUN 085 PASS | class=download-complete | errors=0 | scan=complete; opened=1; duration=1500ms
+RUN 026 PASS | class=download-cancel | errors=0 | scan=cancelled; opened=0
+RUN 046 PASS | class=showcase | errors=0 | showcase=catalog-5
+RUN 070 PASS | class=showcase | errors=0 | showcase=catalog-5
+RUN 003 PASS | class=download-escape | errors=0 | scan=escape; opened=0
+RUN 091 PASS | class=keyboard-allow | errors=0 | ordinary-keys=allowed
+RUN 042 PASS | class=keyboard-block | errors=0 | shortcuts=4/4 blocked
+RUN 044 PASS | class=image-drag | errors=0 | image-drag=3/3 blocked
+RUN 083 PASS | class=comment-scrub | errors=0 | scrub=1 removed, 1 retained
+RUN 078 PASS | class=keyboard-block | errors=0 | shortcuts=4/4 blocked
+RUN 006 PASS | class=keyboard-block | errors=0 | shortcuts=4/4 blocked
+RUN 063 PASS | class=download-escape | errors=0 | scan=escape; opened=0
+RUN 098 PASS | class=download-cancel | errors=0 | scan=cancelled; opened=0
+RUN 038 PASS | class=download-cancel | errors=0 | scan=cancelled; opened=0
+RUN 074 PASS | class=download-cancel | errors=0 | scan=cancelled; opened=0
+RUN 027 PASS | class=download-escape | errors=0 | scan=escape; opened=0
+RUN 092 PASS | class=image-drag | errors=0 | image-drag=3/3 blocked
+RUN 043 PASS | class=keyboard-allow | errors=0 | ordinary-keys=allowed
+RUN 039 PASS | class=download-escape | errors=0 | scan=escape; opened=0
+RUN 058 PASS | class=showcase | errors=0 | showcase=catalog-5
+RUN 022 PASS | class=showcase | errors=0 | showcase=catalog-5
+RUN 019 PASS | class=keyboard-allow | errors=0 | ordinary-keys=allowed
+RUN 013 PASS | class=download-complete | errors=0 | scan=complete; opened=1; duration=1500ms
+RUN 045 PASS | class=plain-drag | errors=0 | plain-drag=allowed
+RUN 057 PASS | class=plain-drag | errors=0 | plain-drag=allowed
+RUN 087 PASS | class=download-escape | errors=0 | scan=escape; opened=0
+RUN 061 PASS | class=download-complete | errors=0 | scan=complete; opened=1; duration=1500ms
+RUN 062 PASS | class=download-cancel | errors=0 | scan=cancelled; opened=0
+RUN 075 PASS | class=download-escape | errors=0 | scan=escape; opened=0
+RUN 030 PASS | class=keyboard-block | errors=0 | shortcuts=4/4 blocked
+RUN 059 PASS | class=comment-scrub | errors=0 | scrub=1 removed, 1 retained
+RUN 047 PASS | class=comment-scrub | errors=0 | scrub=1 removed, 1 retained
+RUN 048 PASS | class=scan-guards | errors=0 | guards=double-start rejected
+RUN 082 PASS | class=showcase | errors=0 | showcase=catalog-5
+RUN 053 PASS | class=contextmenu | errors=0 | contextmenu=blocked
+RUN 023 PASS | class=comment-scrub | errors=0 | scrub=1 removed, 1 retained
+RUN 069 PASS | class=plain-drag | errors=0 | plain-drag=allowed
+RUN 052 PASS | class=invalid-url | errors=0 | url=rejected; modal=hidden
+RUN 076 PASS | class=invalid-url | errors=0 | url=rejected; modal=hidden
+RUN 065 PASS | class=contextmenu | errors=0 | contextmenu=blocked
+RUN 033 PASS | class=plain-drag | errors=0 | plain-drag=allowed
+RUN 049 PASS | class=download-complete | errors=0 | scan=complete; opened=1; duration=1500ms
+TOTAL_RUNS=100 PASS=100 FAIL=0
+STRESS_VERDICT_SHIELD: 100/100 PASS

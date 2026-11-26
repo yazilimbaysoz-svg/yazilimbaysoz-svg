@@ -1,0 +1,102 @@
+RUN 029 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 075 PASS | class=malformed | errors=0 | viewer-inert; preloader=removed; kpi=5
+RUN 022 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 086 PASS | class=boundary | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 052 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 092 PASS | class=boundary | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 058 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 032 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 066 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 001 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 007 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 050 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 026 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 045 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 018 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 062 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 004 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 021 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 055 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 099 PASS | class=mutation | errors=0 | viewer=open/zoom/tilt/escape; kpi=0
+RUN 023 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 090 PASS | class=boundary | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 095 PASS | class=boundary | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 014 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 060 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 073 PASS | class=malformed | errors=0 | viewer-inert; preloader=removed; kpi=5
+RUN 013 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 041 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 053 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 054 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 046 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 009 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 076 PASS | class=malformed | errors=0 | viewer-inert; preloader=removed; kpi=5
+RUN 006 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 057 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 037 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 096 PASS | class=boundary | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 068 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 010 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 005 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 034 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 040 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 098 PASS | class=mutation | errors=0 | viewer=open/zoom/tilt/escape; kpi=0
+RUN 017 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 036 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 083 PASS | class=malformed | errors=0 | viewer-inert; preloader=removed; kpi=5
+RUN 097 PASS | class=mutation | errors=0 | viewer=open/zoom/tilt/escape; kpi=0
+RUN 024 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 081 PASS | class=malformed | errors=0 | viewer-inert; preloader=removed; kpi=5
+RUN 072 PASS | class=malformed | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 091 PASS | class=boundary | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 048 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 070 PASS | class=malformed | errors=0 | viewer-inert; preloader=removed; kpi=5
+RUN 067 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 025 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 084 PASS | class=malformed | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 043 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 082 PASS | class=malformed | errors=0 | viewer-inert; preloader=removed; kpi=5
+RUN 035 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 039 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 038 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 030 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 012 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 071 PASS | class=malformed | errors=0 | viewer-inert; preloader=removed; kpi=5
+RUN 100 PASS | class=mutation | errors=0 | viewer=open/zoom/tilt/escape; kpi=0
+RUN 080 PASS | class=malformed | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 064 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 061 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 074 PASS | class=malformed | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 065 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 008 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 028 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 087 PASS | class=boundary | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 042 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 016 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 079 PASS | class=malformed | errors=0 | viewer-inert; preloader=removed; kpi=5
+RUN 044 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 063 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 047 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 051 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 093 PASS | class=boundary | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 033 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 049 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 019 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 002 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 015 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 078 PASS | class=malformed | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 069 PASS | class=malformed | errors=0 | viewer-inert; preloader=removed; kpi=5
+RUN 031 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 088 PASS | class=boundary | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 059 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 003 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 027 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 020 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 085 PASS | class=malformed | errors=0 | viewer-inert; preloader=removed; kpi=5
+RUN 089 PASS | class=boundary | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+RUN 011 PASS | class=valid | errors=0 | viewer=open/zoom/tilt/escape; kpi=4
+RUN 056 PASS | class=empty | errors=0 | viewer-skipped; preloader=removed; kpi=0
+RUN 077 PASS | class=malformed | errors=0 | viewer-inert; preloader=removed; kpi=5
+RUN 094 PASS | class=boundary | errors=0 | viewer=open/zoom/tilt/escape; kpi=5
+TOTAL_RUNS=100 PASS=100 FAIL=0
+STRESS_VERDICT_3D: 100/100 PASS

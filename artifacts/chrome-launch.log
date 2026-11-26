@@ -1,0 +1,3 @@
+[1122/195815.931311:WARNING:chrome/app/chrome_main_linux.cc:84] Read channel stable from /app/extra/CHROME_VERSION_EXTRA
+Mevcut tarayıcı oturumunda açılıyor.
+[27:27:0100/000000.043974:ERROR:content/zygote/zygote_linux.cc:662] write: Veri alınamıyor (32)

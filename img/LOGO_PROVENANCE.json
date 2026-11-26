@@ -1,0 +1,82 @@
+{
+  "schema": "naztech.logo-provenance/1.1",
+  "publisher": {
+    "organization": "Baysöz Yazılım",
+    "contact": "baysozlabs@proton.me",
+    "site": "https://github.com"
+  },
+  "retrieved_on": "2026-11-22",
+  "disclaimer": "Partner marks displayed on this page are the property of their respective owners and are shown for identification purposes only. Baysöz Yazılım is not affiliated with, endorsed by, or sponsored by N2Mobil or Lavox Elektronik unless expressly stated in writing. Official artwork is reproduced unmodified. Inquiries: baysozlabs@proton.me.",
+  "attribution": "Curated and integrated by Baysöz Yazılım (baysozlabs@proton.me).",
+  "entries": [
+    {
+      "partner": "N2Mobil",
+      "source_url": "https://n2mobil.com/wp-content/uploads/2023/03/logo.png",
+      "retrieval_method": "curl -fL over HTTPS with redirect following",
+      "original": {
+        "path": "not shipped; byte-identical to the derivative below",
+        "sha256": "64b4a2604401f8429ff8d414d1dd5a63a7cdb74549ae011fad23afc5881886e5",
+        "bytes": 2427,
+        "width": 190,
+        "height": 45,
+        "pixel_format": "8-bit indexed PNG with tRNS transparency"
+      },
+      "shipped_derivative": {
+        "path": "img/n2mobil_logo.png",
+        "sha256": "64b4a2604401f8429ff8d414d1dd5a63a7cdb74549ae011fad23afc5881886e5",
+        "bytes": 2427,
+        "width": 190,
+        "height": 45
+      },
+      "transform_steps": [
+        "Downloaded the official PNG verbatim over HTTPS.",
+        "Verified the PNG signature, 190x45 IHDR dimensions, 2427-byte size and palette transparency.",
+        "Copied the original bytes unchanged into the repository; no resize, crop, recolor or recompression."
+      ],
+      "fallback": {
+        "path": "img/n2mobil_logo.svg",
+        "kind": "locally authored non-official approximation",
+        "view_box": "0 0 190 45",
+        "purpose": "Displayed only when the official PNG cannot be decoded."
+      }
+    },
+    {
+      "partner": "Lavox Elektronik",
+      "source_url": "https://percdn.com/f/754106/bzR6YWFtNG0vcUp3ZUdFOVU1NG5hQT09/l/logo-61901291-sw5120sh2644.png",
+      "retrieval_method": "curl -fL over HTTPS with redirect following",
+      "original": {
+        "path": "not shipped; retained outside the repository for hashing only",
+        "sha256": "ff9aadf5ef6da860d3a59c24c697cf1535cadc4d373a024ed90e120e6fecea3a",
+        "bytes": 2262726,
+        "width": 3000,
+        "height": 1549,
+        "pixel_format": "8-bit RGBA PNG with an opaque white field"
+      },
+      "shipped_derivative": {
+        "path": "img/lavox_logo.png",
+        "sha256": "bea431d74bbde1036a203ab6a6c9a34d876451e7f0b23dd5bb0802a20a53de1d",
+        "bytes": 71581,
+        "width": 640,
+        "height": 330
+      },
+      "transform_steps": [
+        "Downloaded the official 3000x1549 PNG verbatim over HTTPS into a temporary location outside the repository.",
+        "Downscaled once to 640x330 with vipsthumbnail using a 640x640 bounding box, maximum PNG compression and metadata stripping.",
+        "Preserved the original aspect ratio, white field, colors and artwork; no crop, upscale, recolor or overlay was applied.",
+        "Verified the PNG signature, dimensions and 71581-byte size against the 96 KiB budget; the original bytes were not shipped."
+      ],
+      "fallback": {
+        "path": "img/lavox_logo.svg",
+        "kind": "locally authored non-official approximation",
+        "view_box": "0 0 300 155",
+        "purpose": "Displayed only when the official PNG cannot be decoded."
+      }
+    }
+  ],
+  "display_rules": {
+    "n2mobil": "Rendered at its native 190x45 size inside a white chip; never upscaled.",
+    "lavox": "Rendered inside a white chip with object-fit: contain and a 320px inline-size cap; loading=lazy.",
+    "hikvision": "Existing first-party red and white wordmark is unchanged.",
+    "fallbacks": "Swapped client-side only on image error or cached decode failure; SVG titles and descriptions identify them as non-official approximations."
+  }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https-guard.js"></script>
+<title>NazTech Bilişim & Lavox | Kurumsal Yönetim Merkezi</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div id="loginView" class="login-wrap">
+  <div class="login-box">
+    <h2>NazTech Admin</h2>
+    <p>Kurumsal Yönetim, CRM & 3D Katalog Kontrol Merkezi</p>
+    <input type="email" id="admEmail" value="ahmet.fener@naztechbilisim.com" placeholder="Yönetici E-posta">
+    <input type="password" id="admPass" value="NazTech2026!" autocomplete="new-password" placeholder="Şifre">
+    <button id="btnLogin" style="width:100%">Güvenli Giriş Yap</button>
+    <p id="loginMsg" style="color:#ef4444;margin-top:10px"></p>
+  </div>
+</div>
+
+<div id="panelView" class="layout hidden">
+  <aside class="sidebar">
+    <h3>Naztech bilişim</h3>
+    <small>Şanlıurfa Ana Bayi Kontrol Paneli</small>
+    <button class="nav-btn active" onclick="showTab('dash',this)">📊 Genel Bakış & Analitik</button>
+    <button class="nav-btn" onclick="showTab('quotes',this)">📩 Teklif CRM & WhatsApp</button>
+    <button class="nav-btn" onclick="showTab('catalog',this)">📦 Lavox Katalog (2026-27)</button>
+    <button class="nav-btn" onclick="showTab('models3d',this)">🧊 3D Modeller & Hizmetler</button>
+    <button class="nav-btn" onclick="showTab('faq',this)">🤖 Akıllı Asistan / SSS</button>
+    <button class="nav-btn" onclick="showTab('reviews',this)">⭐ Müşteri Yorumları</button>
+    <button class="nav-btn" onclick="showTab('settings',this)">⚙️ Site, Bulut & Güvenlik</button>
+    <a href="../index.html" target="_blank" class="nav-btn" style="text-decoration:none;margin-top:12px;color:#38bdf8">🌐 Canlı Siteyi Görüntüle</a>
+    <button class="nav-btn btn-err" style="margin-top:auto" onclick="logoutAdmin()">🔒 Güvenli Çıkış</button>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div><h2 id="pageTitle">Genel Bakış & Sistem Analitiği</h2><small style="color:#94a3b8">HTTPS & Otomatik Yedekleme Koruması Aktif</small></div>
+      <div><button class="btn-sm btn-purp" id="btnLiveEdit" onclick="toggleLiveEdit()">✏️ Anlık Düzenleme: Kapalı</button> <button class="btn-sm btn-ok" onclick="exportBackup()">💾 Tam Yedek İndir</button></div>
+    </div>
+
+    <section id="tab-dash" class="tab">
+      <div class="grid">
+        <div class="stat"><span>Katalog Ürünü</span><h2 id="stProd">0</h2></div>
+        <div class="stat"><span>Bekleyen Teklif</span><h2 id="stQuote">0</h2></div>
+        <div class="stat"><span>Aktif 3D Model</span><h2 id="st3d">8</h2></div>
+        <div class="stat"><span>Onaylı Yorum</span><h2 id="stRev">0</h2></div>
+        <div class="stat"><span>Site Ziyaret / Etkileşim</span><h2 id="stViews">0</h2></div>
+      </div>
+      <div class="grid-2">
+        <div class="card"><h3>Kategori Dağılımı</h3><div id="catStats"></div></div>
+        <div class="card"><h3>Hızlı İşlemler & Sistem Durumu</h3>
+          <p style="color:#94a3b8;font-size:13px;line-height:1.6">Tüm değişiklikler anlık olarak tarayıcı veritabanına kaydedilir. Bulut URL tanımlandığında mobil cihazlarla otomatik senkronize olur.</p>
+          <div style="margin-top:14px">
+            <button class="btn-sm" onclick="addDemoQuote()">+ Test Teklifi Oluştur</button>
+            <button class="btn-sm btn-purp" onclick="exportCatalogJson()">📄 lavox-katalog.json İndir</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-quotes" class="tab hidden">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <h3>Gelen Teklif & Keşif Talepleri (CRM)</h3>
+          <button class="btn-sm btn-ok" onclick="exportQuotesCsv()">📊 Excel / CSV İndir</button>
+        </div>
+        <table><thead><tr><th>Tarih</th><th>Müşteri</th><th>Telefon</th><th>Talep / Hizmet</th><th>Not</th><th>Durum</th><th>İşlem</th></tr></thead><tbody id="quoteList"></tbody></table>
+      </div>
+    </section>
+
+    <section id="tab-catalog" class="tab hidden">
+      <div class="card"><h3>Yeni Ürün Ekle</h3>
+        <div class="grid-2">
+          <input id="pName" placeholder="Ürün Adı (Örn: Lavox 4K ColorVu Kamera)">
+          <input id="pCat" placeholder="Kategori (Örn: Güvenlik Kameraları)">
+          <input id="pImg" placeholder="Görsel Yolu (Örn: img/lavox-2027.jpg)">
+          <input id="pPrice" placeholder="Fiyat / Etiket (Örn: Fiyat Sorunuz)">
+        </div>
+        <button onclick="addProduct()">Kataloğa Kaydet</button>
+        <button class="btn-purp" style="margin-left:8px" onclick="exportCatalogJson()">Güncel lavox-katalog.json İndir</button>
+      </div>
+      <div class="card">
+        <h3>Katalog Ürün Listesi</h3>
+        <input id="catSearch" oninput="renderAll()" placeholder="Ürün adı veya kategoriye göre anında ara...">
+        <table><thead><tr><th>Ürün Adı</th><th>Kategori</th><th>Fiyat / Durum</th><th>İşlem</th></tr></thead><tbody id="prodList"></tbody></table>
+      </div>
+    </section>
+
+    <section id="tab-models3d" class="tab hidden">
+      <div class="card"><h3>3D WebGL Modeller & Kurumsal Hizmet Kontrolü</h3>
+        <p style="color:#94a3b8;font-size:13px;margin-bottom:12px">Sitedeki 8 interaktif 3D modelin görünürlüğünü ve başlıklarını buradan yönetebilirsiniz.</p>
+        <table><thead><tr><th>Model Kodu</th><th>Görünen Başlık</th><th>Durum</th><th>İşlem</th></tr></thead><tbody id="model3dList"></tbody></table>
+      </div>
+    </section>
+
+    <section id="tab-faq" class="tab hidden">
+      <div class="card"><h3>Canlı Müşteri Asistanı (SSS Botu) Yönetimi</h3>
+        <input id="faqQ" placeholder="Soru (Örn: Şanlıurfa içi ücretsiz keşif var mı?)">
+        <textarea id="faqA" rows="2" placeholder="Otomatik Cevap (Örn: Evet, Karaköprü ve tüm Şanlıurfa merkez ilçelerine ücretsiz keşif hizmetimiz vardır.)"></textarea>
+        <button onclick="addFaq()">Soru-Cevap Ekle</button>
+        <table style="margin-top:16px"><thead><tr><th>Soru</th><th>Otomatik Cevap</th><th>İşlem</th></tr></thead><tbody id="faqList"></tbody></table>
+      </div>
+    </section>
+
+    <section id="tab-reviews" class="tab hidden">
+      <div class="card"><h3>Müşteri Yorumları Onay Merkezi</h3>
+        <table><thead><tr><th>Müşteri</th><th>Yorum</th><th>Puan</th><th>Durum</th><th>İşlem</th></tr></thead><tbody id="revList"></tbody></table>
+      </div>
+    </section>
+
+    <section id="tab-settings" class="tab hidden">
+      <div class="grid-2">
+        <div class="card"><h3>Duyuru Bandı, İletişim & Bulut Senkronizasyonu</h3>
+          <input id="setBanner" placeholder="Üst Duyuru Metni (Boş bırakılırsa gizlenir)">
+          <input id="setPhone" placeholder="WhatsApp Hattı (Örn: 905XXXXXXXXX)">
+          <input id="setFbUrl" placeholder="Firebase Bulut Veritabanı URL">
+          <input id="setNewPass" type="password" placeholder="Yeni Admin Şifresi (Değiştirmek için doldurun)">
+          <button onclick="saveSettings()">Tüm Ayarları Yayınla</button>
+        </div>
+        <div class="card"><h3>Yedekleme & Geri Yükleme Merkezi</h3>
+          <p style="color:#94a3b8;font-size:13px;margin-bottom:12px">Daha önce indirdiğiniz bir <b>.json</b> veritabanı yedeğini seçerek tüm verileri tek tıkla geri yükleyebilirsiniz.</p>
+          <input type="file" id="importFile" accept=".json">
+          <button class="btn-warn" onclick="importBackup()">📂 Yedekten Geri Yükle</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<div id="toast" class="toast hidden"></div>
+<script src="admin.js?v=8"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+PREFLIGHT PASS | node --check hizmet-detay.js | syntax OK
+PREFLIGHT PASS | node --check matrix.js | syntax OK
+PREFLIGHT PASS | node --check tezweb-3d.js | syntax OK
+PREFLIGHT PASS | node --check tests/dom-shim.mjs | syntax OK
+PREFLIGHT PASS | node --check tests/run_3d_verification.mjs | syntax OK
+PREFLIGHT PASS | node --check tests/run_realistic_verification.mjs | syntax OK
+PREFLIGHT PASS | node --check tests/run_shield_verification.mjs | syntax OK
+PREFLIGHT PASS | node --check tests/run_verification.mjs | syntax OK
+PREFLIGHT PASS | node --check tests/run_webgl_vm_verification.mjs | syntax OK
+PREFLIGHT PASS | node --check tests/verify_assets.mjs | syntax OK
+PREFLIGHT PASS | test module count | found 7
+PREFLIGHT PASS | HTML balanced tags | tag stack closed
+PREFLIGHT PASS | HTML exactly one </body> | count=1
+PREFLIGHT PASS | HTML eight ordered catalog cards | ids=1,2,3,4,5,6,7,8
+PREFLIGHT PASS | HTML ten modal ids | all present
+PREFLIGHT PASS | HTML no inline on*= handlers | count=0
+PREFLIGHT PASS | index.html privacy | no local identity
+PREFLIGHT PASS | style.css privacy | no local identity
+PREFLIGHT PASS | hizmet-detay.js privacy | no local identity
+PREFLIGHT PASS | matrix.js privacy | no local identity
+PREFLIGHT PASS | tezweb-3d.js privacy | no local identity
+PREFLIGHT PASS | CSS balanced braces | 242/242
+PREFLIGHT PASS | CSS exactly one .energy-ring rule | count=1
+PREFLIGHT PASS | CSS @keyframes pulseRing | animation keyframes present
+PREFLIGHT PASS | CSS no ringPulse | legacy token absent
+PREFLIGHT PASS | CSS no !important | declaration absent
+PREFLIGHT PASS | CSS one .brand__logo with max <= 40px | rules=1, maxima=[40,40]
+PREFLIGHT PASS | HTML 3D module and preloader linked | classic deferred module and circuit markup present
+PREFLIGHT PASS | HTML hero scene canvas | 3D scene canvas present in hero
+PREFLIGHT PASS | HTML four KPI counters | nodes=4
+PREFLIGHT PASS | HTML luxury partner marquee | three partners with duplicated seamless track
+PREFLIGHT PASS | CSS 3D component rules | marquee, counters, viewer and card spotlight styles present
+PREFLIGHT PASS | JS 0.8s circuit preloader | 800ms lifecycle with smooth completion class
+PREFLIGHT PASS | JS hero wireframe and depth particles | projected sphere, particle depth and pointer reactivity
+PREFLIGHT PASS | JS scroll-triggered counters | counter controller and viewport trigger present
+PREFLIGHT PASS | JS 3D product viewer | modal-local viewer with wheel and plus/minus zoom
+PREFLIGHT PASS | Catalog 5 N2MOBIL showcase | fleet tracking details and keyboard-accessible product photos
+RUN 001 PASS | class=malformed | input=number(0) | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 002 PASS | class=mutation-after-open | input=string(len=1) "3" | close=escape | errors=0 | open=true; mutation=10; close=escape; restored=true
+RUN 003 PASS | class=valid | input=string(len=1) "7" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true
+RUN 004 PASS | class=malformed | input=string(len=1) "9" | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 005 PASS | class=valid | input=string(len=1) "7" | close=escape | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true
+RUN 006 PASS | class=valid | input=string(len=1) "4" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true
+RUN 007 PASS | class=valid | input=string(len=1) "2" | close=controller | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true
+RUN 008 PASS | class=boundary | input=string(len=3) "‮1‬" | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 009 PASS | class=malformed | input=string(len=15) "' OR '1'='1' --" | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 010 PASS | class=mutation-after-open | input=string(len=1) "5" | close=controller | errors=0 | open=true; mutation=4; close=controller; restored=true
+RUN 011 PASS | class=valid | input=string(len=1) "1" | close=escape | errors=0 | card-binding=ok; open=true; gallery=3/3; specs=5/5; sponsor=true; close=escape; restored=true
+RUN 012 PASS | class=valid | input=string(len=1) "3" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true
+RUN 013 PASS | class=mutation-after-open | input=string(len=1) "8" | close=controller | errors=0 | open=true; mutation=7; close=controller; restored=true
+RUN 014 PASS | class=mutation-after-open | input=string(len=1) "4" | close=escape | errors=0 | open=true; mutation=11; close=escape; restored=true
+RUN 015 PASS | class=mutation-after-open | input=string(len=1) "1" | close=backdrop | errors=0 | open=true; mutation=8; close=backdrop; restored=true
+RUN 016 PASS | class=mutation-after-open | input=string(len=1) "7" | close=controller | errors=0 | open=true; mutation=6; close=controller; restored=true
+RUN 017 PASS | class=valid | input=string(len=1) "8" | close=escape | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true
+RUN 018 PASS | class=valid | input=string(len=1) "3" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true
+RUN 019 PASS | class=valid | input=string(len=1) "2" | close=controller | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true
+RUN 020 PASS | class=prototype | input=object([object Object]) | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 021 PASS | class=boundary | input=string(len=1) "１" | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 022 PASS | class=boundary | input=string(len=1) "\ud800" | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 023 PASS | class=mutation-after-open | input=string(len=1) "1" | close=escape | errors=0 | open=true; mutation=0; close=escape; restored=true
+RUN 024 PASS | class=prototype | input=object([object Object]) | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 025 PASS | class=valid | input=string(len=1) "6" | close=controller | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true
+RUN 026 PASS | class=malformed | input=undefined | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 027 PASS | class=valid | input=string(len=1) "1" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=3/3; specs=5/5; sponsor=true; close=backdrop; restored=true
+RUN 028 PASS | class=empty | input=string(len=0) "" | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 029 PASS | class=valid | input=string(len=1) "2" | close=escape | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true
+RUN 030 PASS | class=valid | input=string(len=1) "4" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true
+RUN 031 PASS | class=malformed | input=object([object Object]) | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 032 PASS | class=malformed | input=string(len=3) "abc" | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 033 PASS | class=valid | input=string(len=1) "7" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true
+RUN 034 PASS | class=valid | input=string(len=1) "5" | close=controller | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=7/7; sponsor=false; close=controller; restored=true
+RUN 035 PASS | class=boundary | input=string(len=3) "\r9\t" | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 036 PASS | class=prototype | input=bigint(1) | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 037 PASS | class=valid | input=string(len=1) "5" | close=controller | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=7/7; sponsor=false; close=controller; restored=true
+RUN 038 PASS | class=valid | input=string(len=1) "4" | close=escape | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true
+RUN 039 PASS | class=boundary | input=string(len=2) "\u00001" | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 040 PASS | class=valid | input=string(len=1) "1" | close=controller | errors=0 | card-binding=ok; open=true; gallery=3/3; specs=5/5; sponsor=true; close=controller; restored=true
+RUN 041 PASS | class=valid | input=string(len=1) "6" | close=escape | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true
+RUN 042 PASS | class=valid | input=string(len=1) "8" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true
+RUN 043 PASS | class=valid | input=string(len=1) "3" | close=controller | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true
+RUN 044 PASS | class=mutation-after-open | input=string(len=1) "6" | close=escape | errors=0 | open=true; mutation=5; close=escape; restored=true
+RUN 045 PASS | class=mutation-after-open | input=string(len=1) "2" | close=backdrop | errors=0 | open=true; mutation=1; close=backdrop; restored=true
+RUN 046 PASS | class=prototype | input=symbol(Symbol(1)) | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 047 PASS | class=valid | input=string(len=1) "7" | close=escape | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true
+RUN 048 PASS | class=valid | input=string(len=1) "5" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=7/7; sponsor=false; close=backdrop; restored=true
+RUN 049 PASS | class=valid | input=string(len=1) "8" | close=controller | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true
+RUN 050 PASS | class=valid | input=string(len=1) "2" | close=escape | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true
+RUN 051 PASS | class=prototype | input=object([object String]) | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 052 PASS | class=valid | input=string(len=1) "3" | close=controller | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true
+RUN 053 PASS | class=boundary | input=string(len=1) "\u0000" | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 054 PASS | class=malformed | input=string(len=25) "<script>alert(1)</script>" | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 055 PASS | class=valid | input=string(len=1) "4" | close=controller | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true
+RUN 056 PASS | class=valid | input=string(len=1) "1" | close=escape | errors=0 | card-binding=ok; open=true; gallery=3/3; specs=5/5; sponsor=true; close=escape; restored=true
+RUN 057 PASS | class=boundary | input=string(len=2) "１１" | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 058 PASS | class=prototype | input=object([object Object]) | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 059 PASS | class=boundary | input=string(len=2) "9\n" | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 060 PASS | class=valid | input=string(len=1) "6" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true
+RUN 061 PASS | class=whitespace | input=string(len=1) "\t" | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 062 PASS | class=prototype | input=object([object Array]) | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 063 PASS | class=valid | input=string(len=1) "1" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=3/3; specs=5/5; sponsor=true; close=backdrop; restored=true
+RUN 064 PASS | class=mutation-after-open | input=string(len=1) "3" | close=controller | errors=0 | open=true; mutation=2; close=controller; restored=true
+RUN 065 PASS | class=empty | input=string(len=0) "" | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 066 PASS | class=empty | input=string(len=0) "" | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 067 PASS | class=boundary | input=string(len=10001) "                                                …(... | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 068 PASS | class=boundary | input=string(len=2) "1\u0000" | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 069 PASS | class=valid | input=string(len=1) "2" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true
+RUN 070 PASS | class=malformed | input=number(Infinity) | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 071 PASS | class=mutation-after-open | input=string(len=1) "2" | close=escape | errors=0 | open=true; mutation=9; close=escape; restored=true
+RUN 072 PASS | class=valid | input=string(len=1) "8" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true
+RUN 073 PASS | class=prototype | input=object([object Object]) | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 074 PASS | class=valid | input=string(len=1) "6" | close=escape | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true
+RUN 075 PASS | class=mutation-after-open | input=string(len=1) "4" | close=backdrop | errors=0 | open=true; mutation=3; close=backdrop; restored=true
+RUN 076 PASS | class=empty | input=string(len=0) "" | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 077 PASS | class=valid | input=string(len=1) "8" | close=escape | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true
+RUN 078 PASS | class=malformed | input=boolean(true) | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 079 PASS | class=valid | input=string(len=1) "5" | close=controller | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=7/7; sponsor=false; close=controller; restored=true
+RUN 080 PASS | class=valid | input=string(len=1) "4" | close=escape | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true
+RUN 081 PASS | class=valid | input=string(len=1) "3" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true
+RUN 082 PASS | class=whitespace | input=string(len=1) " " | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 083 PASS | class=malformed | input=number(-1) | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 084 PASS | class=boundary | input=string(len=2) "ı1" | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 085 PASS | class=malformed | input=object([object Array]) | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 086 PASS | class=malformed | input=number(NaN) | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 087 PASS | class=prototype | input=object(<hostile-proxy>) | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 088 PASS | class=valid | input=string(len=1) "6" | close=controller | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true
+RUN 089 PASS | class=malformed | input=boolean(false) | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 090 PASS | class=whitespace | input=string(len=1) "\n" | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 091 PASS | class=whitespace | input=string(len=3) "   " | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 092 PASS | class=boundary | input=string(len=10000) "111111111111111111111111111111111111111111111111…(... | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 093 PASS | class=malformed | input=string(len=2) "01" | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 094 PASS | class=valid | input=string(len=1) "5" | close=controller | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=7/7; sponsor=false; close=controller; restored=true
+RUN 095 PASS | class=prototype | input=object([object Number]) | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 096 PASS | class=malformed | input=number(9) | close=backdrop | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 097 PASS | class=prototype | input=object([object Object]) | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 098 PASS | class=prototype | input=object([object Object]) | close=escape | errors=0 | rejected; dom-unchanged; hostile-card-inert
+RUN 099 PASS | class=valid | input=string(len=1) "7" | close=backdrop | errors=0 | card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true
+RUN 100 PASS | class=malformed | input=null | close=controller | errors=0 | rejected; dom-unchanged; hostile-card-inert
+TOTAL_RUNS=100 PASS=100 FAIL=0
+CONSOLE_ERRORS=0
+STRESS_VERDICT: 100/100 PASS

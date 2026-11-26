@@ -1,0 +1,10 @@
+You are the Principal 3D Graphics Engineer of Baysoz Labs. Upgrade ~/projeler/naztech-bilisim/webgl-3d-viewer.js so ALL 8 catalog boxes render realistic, high-detail, multi-part Three.js PBR 3D hardware models (360-degree drag-rotatable and zoomable) with dynamic canvas brand textures and studio lighting:
+1) Catalog 1 (Kamera Sistemleri): Realistic matte-white HIKVISION ColorVu 4K Bullet IP Camera with sunshield visor, multi-element glass lens, IR ring, articulated wall bracket, and red/black HIKVISION logo stamped on both sides.
+2) Catalog 2 (Hirsiz Alarm): Realistic Smart Burglar Alarm Keypad Panel + PIR Motion Sensor with backlit LCD screen, numeric keypad, and Fresnel sensor dome.
+3) Catalog 3 (Bilisim): Detailed 19-inch Enterprise Server Rack Cabinet with tinted glass door, rack-mounted servers, patch panel, and blinking status LEDs.
+4) Catalog 4 (Yakit Otomasyon): Realistic Commercial Fuel Dispenser Pump with digital fuel display screen, stainless steel body, fuel hose, and nozzle holster.
+5) Catalog 5 (Arac Takip): Realistic N2MOBIL GPS Fleet Tracker Unit in anodized black aluminum housing with dual gold-tipped SMA GPS/GSM antennas, LED indicators, and crisp N2MOBIL logo stamped on top.
+6) Catalog 6 (Yazilim): Realistic Dual-Monitor Software Engineering & ERP Workstation with glowing code/dashboard screens and aluminum stand.
+7) Catalog 7 (Yangin Ihbar): Realistic Addressable Fire Alarm Control Panel + Ceiling Optical Smoke Detector + Red Manual Call Point.
+8) Catalog 8 (Elektrik): Realistic Industrial Electrical Distribution & Compensation Panel with DIN-rail circuit breakers, copper busbars, and digital volt/ampere meters.
+Verify zero syntax errors and launch http://127.0.0.1:8787 in Flatpak Google Chrome (flatpak run com.google.Chrome --new-window "http://127.0.0.1:8787").

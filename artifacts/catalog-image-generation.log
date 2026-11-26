@@ -1,0 +1,13 @@
+==============================================================================
+UTC: 2026-11-24T08:34:39+00:00
+Baysöz Yazılım — catalog image generation (baysozlabs@proton.me)
+Chromium: /home/muslumbaysoz/.cache/ms-playwright/chromium-1255/chrome-linux64/chrome
+Viewport: 1920x1080  DSF: 2  JPEG quality: 92  Expected output: 3840x2160
+PASS  bilisim.jpg        bytes=599788    dimensions=3840x2160  caption=KURUMSAL AĞ ALTYAPISI
+PASS  yakit.jpg          bytes=444438    dimensions=3840x2160  caption=YAKIT VE TANK OTOMASYONU
+PASS  arac_takip.jpg     bytes=469073    dimensions=3840x2160  caption=ARAÇ TAKİP VE FİLO YÖNETİMİ
+PASS  yazilim.jpg        bytes=436057    dimensions=3840x2160  caption=KURUMSAL YAZILIM VE ERP
+PASS  yangin.jpg         bytes=456325    dimensions=3840x2160  caption=ADRESİF YANGIN ALARM SİSTEMLERİ
+PASS  elektrik.jpg       bytes=550758    dimensions=3840x2160  caption=ENDÜSTRİYEL ELEKTRİK PANOLARI
+RESULT: 6/6 PASS
+==============================================================================

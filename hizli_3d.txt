@@ -1,0 +1,9 @@
+You are the Principal Engineer of Baysoz Labs. In `~/projeler/naztech-bilisim/`, implement these exact upgrades cleanly and quickly without lengthy multi-round loops:
+1) Create `tezweb-3d.js` and include it in `index.html`:
+   - Smooth 0.8s **NAZTECH** circuit preloader on load.
+   - Mouse-reactive 3D rotating golden wireframe sphere + depth particle field in `#anasayfa`.
+   - 3D perspective tilt + radial gold spotlight hover effect on all 8 `.card-hover` service cards.
+   - Animated scroll-triggered KPI counters (`500+ Tamamlanan Proje`, `8 Uzmanlık Alanı`, `%100 Müşteri Memnuniyeti`, `7/24 Kesintisiz Destek`) above `#hizmetler`.
+   - Interactive **3D Product Viewer (3D Tilt + Zoom In/Out +/- & Mouse Wheel Zoom)** inside `#naztechModal` when clicking any product photo.
+2) Add an infinite smooth left-to-right scrolling luxury partner marquee banner above `#hizmetler` featuring **HIKVISION** (Resmi Çözüm Ortağı), **N2MOBİL** (Yetkili Bayi & Araç Takip Partneri with custom SVG logo), and **LAVOX ELEKTRONİK** (Kurumsal Teknoloji Partneri), and enrich Catalog 5 (Araç Takip Sistemleri) in `hizmet-detay.js` with N2Mobil GPS & Fleet tracking showcase details.
+3) Run `node tests/run_verification.mjs` (or syntax check) to verify zero errors, ensure `python3 -m http.server 8787` is running, and launch `http://127.0.0.1:8787` in Flatpak Google Chrome (`flatpak run com.google.Chrome --new-window "http://127.0.0.1:8787"`).

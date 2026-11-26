@@ -1,0 +1,14 @@
+You are the CEO of Baysoz Labs. Upgrade `~/projeler/naztech-bilisim/` with a true **Three.js WebGL 3D Interactive Product Showcase** (like inspecting a 3D game character/asset in 360 degrees) plus authentic partner logos:
+1) Download the official logos of **N2Mobil** (from `https://n2mobil.com`) and **Lavox Elektronik** (from `https://www.lavoxelektronik.com`) into `~/projeler/naztech-bilisim/img/` (`n2mobil_logo.png` / `.svg` and `lavox_logo.png` / `.svg`, with crisp fallback SVG if blocked), and display them alongside **HIKVISION** in the smooth infinite scrolling luxury partner marquee on the main page.
+2) Build a real **Three.js WebGL 3D Hardware Inspector (`webgl-3d-viewer.js`)** inside `#naztechModal` (loading Three.js from CDN or local bundle) so when the user clicks ANY of the 8 catalog cards, a real interactive **3D geometric hardware model** renders on a 3D pedestal with studio gold lighting:
+   - Catalog 1 (Kamera Sistemleri - HIKVISION): Detailed 3D Bullet/Dome Security Camera with lens glass, IR LED ring, bracket, and status LED.
+   - Catalog 2 (Hırsız Alarm): 3D PIR Motion Sensor & Siren unit with pulsing red/gold sensor dome.
+   - Catalog 3 (Bilişim): 3D Server Rack Cabinet with glowing gold/blue server blades.
+   - Catalog 4 (Yakıt Otomasyon): 3D Fuel Dispenser & Tank telemetry unit.
+   - Catalog 5 (Araç Takip - N2Mobil): 3D N2Mobil GPS Tracker box with dual GSM/GPS antennas & satellite orbit ring.
+   - Catalog 6 (Yazılım): 3D Floating Holographic Data Cube & Code Nodes.
+   - Catalog 7 (Yangın İhbar): 3D Ceiling Smoke Detector & Fire Alarm Bell.
+   - Catalog 8 (Elektrik): 3D Industrial Electrical Distribution Panel & Transformer.
+   Users can **click-and-drag to rotate 360° in all axes**, **scroll wheel or click +/- buttons to zoom in/out**, or toggle **Auto-Rotate (360° Tur)** while viewing the HD photos and technical specs below.
+3) Create `YONETICI_KILAVUZU.md` explaining in clear Turkish how to edit texts, phone numbers, images, and catalogs easily.
+4) Verify zero errors and open `http://127.0.0.1:8787` in Flatpak Google Chrome (`flatpak run com.google.Chrome --new-window "http://127.0.0.1:8787"`).

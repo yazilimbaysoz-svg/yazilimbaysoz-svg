@@ -1,0 +1,39 @@
+Baysöz Yazılım — NAZTECH Catalog Image Verifier / Contact: baysozlabs@proton.me
+hikvision_bullet: installed file passed every gate
+hikvision_bullet: SKIPPED (SKIP)
+hikvision_dome: installed file passed every gate
+hikvision_dome: SKIPPED (SKIP)
+hikvision_nvr: installed file passed every gate
+hikvision_nvr: SKIPPED (SKIP)
+alarm: installed file passed every gate
+alarm: SKIPPED (SKIP)
+bilisim: installed file passed every gate
+bilisim: SKIPPED (SKIP)
+yakit: installed file passed every gate
+yakit: SKIPPED (SKIP)
+arac_takip: installed file passed every gate
+arac_takip: SKIPPED (SKIP)
+yazilim: installed file passed every gate
+yazilim: SKIPPED (SKIP)
+yangin: installed file passed every gate
+yangin: SKIPPED (SKIP)
+elektrik: installed file passed every gate
+elektrik: SKIPPED (SKIP)
+
+TARGET           | SOURCE    | STATUS  | BYTES   | DIMENSIONS | MIME       | VERDICT
+-----------------+-----------+---------+---------+------------+------------+--------
+hikvision_bullet | installed | SKIPPED | 389069  | 1920x1440  | image/jpeg | SKIP   
+hikvision_dome   | installed | SKIPPED | 634341  | 1920x1440  | image/jpeg | SKIP   
+hikvision_nvr    | installed | SKIPPED | 310749  | 1920x837   | image/jpeg | SKIP   
+alarm            | installed | SKIPPED | 1629830 | 1920x3413  | image/jpeg | SKIP   
+bilisim          | installed | SKIPPED | 427089  | 1920x1275  | image/jpeg | SKIP   
+yakit            | installed | SKIPPED | 393272  | 1920x1291  | image/jpeg | SKIP   
+arac_takip       | installed | SKIPPED | 829136  | 1920x2560  | image/jpeg | SKIP   
+yazilim          | installed | SKIPPED | 424480  | 1920x1275  | image/jpeg | SKIP   
+yangin           | installed | SKIPPED | 335569  | 1920x1080  | image/jpeg | SKIP   
+elektrik         | installed | SKIPPED | 322933  | 1920x1440  | image/jpeg | SKIP   
+
+Credits: img/CREDITS.json
+Verification evidence: artifacts/image-verification.json
+Global checks: 10/10 verified, all sha256 values pairwise distinct.
+VERDICT: PASS

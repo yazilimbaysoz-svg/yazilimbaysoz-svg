@@ -1,0 +1,6 @@
+You are the Principal 3D Graphics Engineer of Baysoz Labs. In ~/projeler/naztech-bilisim/webgl-3d-viewer.js, upgrade ONLY Catalogs 0, 1, 2, 3 (first 4 catalogs) to realistic multi-part Three.js PBR 3D models with studio lighting and dynamic canvas brand textures:
+- Catalog 0 (Kamera Sistemleri): Realistic matte-white HIKVISION ColorVu 4K Bullet IP Camera with sunshield visor, multi-element glass optical lens, IR LED ring, articulated wall bracket, and red/black HIKVISION logo stamped on both sides.
+- Catalog 1 (Hirsiz Alarm): Realistic Smart Burglar Alarm Keypad Panel + PIR Motion Sensor with backlit LCD screen, numeric keypad, and Fresnel sensor dome.
+- Catalog 2 (Bilisim): Detailed 19-inch Enterprise Server Rack Cabinet with tinted glass door, rack-mounted servers, patch panel, and blinking status LEDs.
+- Catalog 3 (Yakit Otomasyon): Realistic Commercial Fuel Dispenser Pump with digital fuel display screen, stainless steel body, fuel hose, and nozzle holster.
+Keep existing viewer controls (drag 360 rotate, wheel/+/- zoom) working and verify `node --check webgl-3d-viewer.js`.

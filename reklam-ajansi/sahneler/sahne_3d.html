@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}body{background:#04080f;overflow:hidden;font-family:'Segoe UI',sans-serif;color:#fff}
+#hud{position:fixed;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:8% 7%;pointer-events:none;z-index:2}
+.ust{display:flex;justify-content:space-between;align-items:center;font-size:22px;letter-spacing:4px;color:#19A7B8;font-weight:700}
+.alt{text-align:center;margin-bottom:8%}.baslik{font-size:64px;font-weight:900;letter-spacing:3px;text-shadow:0 0 35px rgba(25,167,184,.8);transition:all .4s}
+.alt-yazi{font-size:28px;color:#d4af37;letter-spacing:4px;margin-top:14px;font-weight:600}
+.cizgi{width:140px;height:4px;background:linear-gradient(90deg,#19A7B8,#d4af37);margin:18px auto;border-radius:2px}
+</style></head><body><div id="hud"><div class="ust"><span>NAZTECH BİLİŞİM</span><span>LAVOX ANA BAYİ</span></div>
+<div class="alt"><div class="baslik" id="b1">GÜVENLİĞİN GELECEĞİ</div><div class="cizgi"></div><div class="alt-yazi" id="b2">ŞANLIURFA ANA BAYİ</div></div></div>
+<canvas id="c"></canvas>
+<script src="three.min.js"></script><script>
+const r=new THREE.WebGLRenderer({canvas:document.getElementById('c'),antialias:true});
+r.setSize(innerWidth,innerHeight);const s=new THREE.Scene(),cam=new THREE.PerspectiveCamera(45,innerWidth/innerHeight,0.1,100);
+const g=new THREE.Group();s.add(g);
+const core=new THREE.Mesh(new THREE.IcosahedronGeometry(1.1,2),new THREE.MeshStandardMaterial({color:0x19A7B8,wireframe:true,emissive:0x0a4d57}));
+const ring1=new THREE.Mesh(new THREE.TorusGeometry(1.7,0.04,16,100),new THREE.MeshStandardMaterial({color:0xd4af37,metalness:0.9,roughness:0.2}));
+const ring2=new THREE.Mesh(new THREE.TorusGeometry(2.1,0.03,16,100),new THREE.MeshStandardMaterial({color:0x19A7B8,emissive:0x19A7B8,emissiveIntensity:0.5}));
+g.add(core,ring1,ring2);
+const l1=new THREE.PointLight(0x19A7B8,3,20);l1.position.set(4,4,5);const l2=new THREE.PointLight(0xd4af37,2.5,20);l2.position.set(-4,-3,4);s.add(l1,l2,new THREE.AmbientLight(0xffffff,0.4));
+window.setTime=(t)=>{core.rotation.y=t*1.2;ring1.rotation.x=t*1.6;ring2.rotation.y=-t*1.3;
+if(t<3){cam.position.set(Math.sin(t)*2,0.5,7-t*0.7);b1.innerText="GÜVENLİĞİN GELECEĞİ";b2.innerText="ŞANLIURFA ANA BAYİ";}
+else if(t<6.5){cam.position.set(0,Math.sin(t*2)*0.6,4.2);ring1.scale.setScalar(1.15);b1.innerText="4K YAPAY ZEKA OPTİK";b2.innerText="LAVOX & HIKVISION PRO";}
+else{cam.position.set(0,0,5.5+(t-6.5)*0.4);b1.innerText="NAZTECH BİLİŞİM";b2.innerText="naztechbilisim.com | 0553 034 18 94";}
+cam.lookAt(0,0,0);r.render(s,cam);};window.setTime(0);
+</script></body></html>

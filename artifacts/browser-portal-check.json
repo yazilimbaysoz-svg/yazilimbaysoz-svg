@@ -1,0 +1,194 @@
+{
+  "generatedBy": "Baysöz Yazılım · baysozlabs@proton.me",
+  "browser": "headless chromium via CDP",
+  "baselineConsoleErrors": 4,
+  "afterConsoleErrors": 2,
+  "introducedConsoleErrors": [],
+  "baselineSamples": [
+    {
+      "source": "log",
+      "message": "The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element."
+    },
+    {
+      "source": "exception",
+      "message": "ReferenceError: tailwind is not defined\n    at http://127.0.0.1:9231/index.html?baseline=1:13:5"
+    },
+    {
+      "source": "log",
+      "message": "The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element."
+    },
+    {
+      "source": "exception",
+      "message": "ReferenceError: tailwind is not defined\n    at http://127.0.0.1:9231/index.html:13:5"
+    }
+  ],
+  "afterSamples": [
+    {
+      "source": "log",
+      "message": "The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element."
+    },
+    {
+      "source": "exception",
+      "message": "ReferenceError: tailwind is not defined\n    at http://127.0.0.1:9231/index.html:13:5"
+    }
+  ],
+  "checks": [
+    {
+      "name": "baseline has no portal",
+      "pass": true,
+      "detail": "portal script absent in baseline load"
+    },
+    {
+      "name": "portal API present",
+      "pass": true,
+      "detail": "window.NaztechPortal exposed"
+    },
+    {
+      "name": "config state local",
+      "pass": true,
+      "detail": "dormant adapter without keys"
+    },
+    {
+      "name": "logged-out nav label",
+      "pass": true,
+      "detail": "exact Turkish label"
+    },
+    {
+      "name": "overlays start hidden",
+      "pass": true,
+      "detail": "both overlays hidden"
+    },
+    {
+      "name": "auth overlay opens",
+      "pass": true,
+      "detail": "nav click opens dialog"
+    },
+    {
+      "name": "scroll lock applied",
+      "pass": true,
+      "detail": "dedicated body class present"
+    },
+    {
+      "name": "auth tabs and KVKK",
+      "pass": true,
+      "detail": "3 roles, 3 modes, 3 demos, KVKK checkbox"
+    },
+    {
+      "name": "demo admin login",
+      "pass": true,
+      "detail": "badge switched to Hesabım / Yönetici"
+    },
+    {
+      "name": "dashboard drawer open",
+      "pass": true,
+      "detail": "four dashboard tabs"
+    },
+    {
+      "name": "seeded records render",
+      "pass": true,
+      "detail": "quote and device cards present"
+    },
+    {
+      "name": "admin pane unlocked for admin",
+      "pass": true,
+      "detail": "admin tab visible"
+    },
+    {
+      "name": "ticket created",
+      "pass": true,
+      "detail": "service record persisted and listed"
+    },
+    {
+      "name": "WhatsApp work order",
+      "pass": true,
+      "detail": "structured encoded work order link"
+    },
+    {
+      "name": "admin status update",
+      "pass": true,
+      "detail": "{\"id\":\"Q-000101\",\"selectValue\":\"Onaylandı\",\"targetStatus\":\"Onaylandı\",\"persisted\":true,\"kind\":\"quote\"}"
+    },
+    {
+      "name": "logout restores nav",
+      "pass": true,
+      "detail": "session cleared"
+    },
+    {
+      "name": "clean close state",
+      "pass": true,
+      "detail": "scroll lock released, overlays hidden"
+    },
+    {
+      "name": "zero introduced console errors",
+      "pass": true,
+      "detail": "0 new error(s) beyond 4 baseline entr(ies)"
+    },
+    {
+      "name": "zero introduced runtime exceptions",
+      "pass": true,
+      "detail": "0 new exception(s); baseline had 2"
+    },
+    {
+      "name": "no cloud fetch without keys",
+      "pass": true,
+      "detail": "configState=local, adapter dormant"
+    },
+    {
+      "name": "existing layout intact",
+      "pass": true,
+      "detail": "catalog and marquee preserved"
+    }
+  ],
+  "interaction": {
+    "boot": {
+      "api": "object",
+      "config": "local",
+      "label": "Müşteri Girişi",
+      "badgeHidden": true,
+      "authHidden": true,
+      "dashHidden": true,
+      "cssLoaded": false
+    },
+    "auth": {
+      "hidden": false,
+      "aria": "false",
+      "locked": true,
+      "focus": "nzpEmail",
+      "roles": 3,
+      "modes": 3,
+      "demos": 3,
+      "kvkk": true
+    },
+    "dashboard": {
+      "hidden": false,
+      "label": "Hesabım",
+      "badge": "Yönetici",
+      "badgeHidden": false,
+      "adminTabHidden": false,
+      "quotes": 4,
+      "devices": 4,
+      "tabs": 4
+    },
+    "ticket": {
+      "resultHidden": false,
+      "href": "https://wa.me/905530341894?text=*naztech%20Bili%C5%9Fim%20%E2%80%94%20%C4%B0%C5%9F%20Emri%20%23T-000001*%0AKay%C4%B1t%20Tipi%3A%20Ar%C4%B1za%20%2F%20Servis%0ARol%3A%20admin%0AM%C3%BC%C5%9Fteri%3A%20Demo%20Y%C3%B6netici%0ACihaz%3A%20HIKVISION%20DS-7608NXI%20K%20Kay%C4%B1t%20Cihaz%C4%B1%20(NZ-HIK-7608-014)%0AA%C3%A7%C4%B1klama%3A%20Kamera%202%20g%C3%B6r%C3%BCnt%C3%BC%20vermiyor%C4%9F%C3%BC%C5%9F%C4%B1%C3%B6%C3%A7%0A%C3%96ncelik%3A%20Y%C3%BCksek%0AAdres%3A%20Belirtilmedi%0ATelefon%3A%2005530341894%0ADurum%3A%20A%C3%A7%C4%B1k%0AKaynak%3A%20NAZTECH%20Kurumsal%20Portal%20%C2%B7%20LOCAL%20DEMO",
+      "tickets": 3
+    },
+    "admin": {
+      "id": "Q-000101",
+      "selectValue": "Onaylandı",
+      "targetStatus": "Onaylandı",
+      "persisted": true,
+      "kind": "quote"
+    },
+    "logout": {
+      "label": "Müşteri Girişi",
+      "badgeHidden": true,
+      "session": null,
+      "locked": false,
+      "authHidden": true,
+      "dashHidden": true
+    }
+  },
+  "screenshotBytes": 90645
+}

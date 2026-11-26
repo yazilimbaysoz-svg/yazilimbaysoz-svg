@@ -1,0 +1,37 @@
+{
+  "ajans": "NAZTECH OTONOM 3D REKLAM AJANSI",
+  "marka": "NAZTECH BİLİŞİM & LAVOX ŞANLIURFA ANA BAYİ",
+  "format": "reels",
+  "cozunurluk": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "sure_sn": 10,
+  "sahneler": [
+    {
+      "id": 1,
+      "baslangic": 0.0,
+      "bitis": 3.0,
+      "baslik": "GÜVENLİĞİN GELECEĞİ",
+      "alt": "ŞANLIURFA ANA BAYİ",
+      "kamera": "orbit_zoom"
+    },
+    {
+      "id": 2,
+      "baslangic": 3.0,
+      "bitis": 6.5,
+      "baslik": "4K YAPAY ZEKA OPTİK",
+      "alt": "LAVOX & HIKVISION PRO",
+      "kamera": "macro_scan"
+    },
+    {
+      "id": 3,
+      "baslangic": 6.5,
+      "bitis": 10.0,
+      "baslik": "NAZTECH BİLİŞİM",
+      "alt": "naztechbilisim.com | 0553 034 18 94",
+      "kamera": "hero_reveal"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+You are the CEO of Baysoz Labs. Upgrade `~/projeler/naztech-bilisim/` into a 2026-2027 Awwwards/Tezweb-grade 3D interactive corporate showcase for **NAZTECH Bilişim** while keeping all existing 8 catalogs, verified HD images in `img/`, HIKVISION partner showcase, and WhatsApp CTAs 100% intact. Execute autonomously:
+1) Create `tezweb-3d.js` and link it in `index.html`:
+   - Luxury 1s **NAZTECH** circuit preloader reveal on startup.
+   - Interactive mouse-reactive 3D rotating golden wireframe sphere + depth particle field in `#anasayfa` (harmonized with `matrix.js` and `.energy-ring`).
+   - 3D perspective tilt + dynamic radial gold spotlight glare on all 8 `.card-hover` service cards.
+   - Animated scroll-triggered KPI counters (`500+ Tamamlanan Proje`, `8 Uzmanlık Alanı`, `%100 Müşteri Memnuniyeti`, `7/24 Kesintisiz Destek`) inserted cleanly above `#hizmetler`.
+   - Interactive **3D Product Viewer (3D Tilt + Zoom In/Out +/- & Wheel Zoom + Pan)** inside `#naztechModal` so clicking any product photo in the catalog lets the user inspect it in 3D with smooth zoom controls.
+2) Verify zero JS/CSS/HTML console errors, run QA checks, and open `http://127.0.0.1:8787` in Flatpak Google Chrome (`flatpak run com.google.Chrome --new-window "http://127.0.0.1:8787"`).

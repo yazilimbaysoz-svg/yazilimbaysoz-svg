@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' https://wa.me; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-src https://www.google.com https://google.com;" />
+  <title>NAZTECH Bilişim | Energy - Teknology - Software | Şanlıurfa</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d0e11'/%3E%3Cpath d='M16 48V16h6l20 22V16h6v32h-6L22 26v22z' fill='%23d4af37'/%3E%3C/svg%3E" />
+  <script src="vendor/tailwind-play-cdn.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    if (window.tailwind) {
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            colors: { obsidian: '#0d0e11', carbon: '#15171c', gold: { light: '#f3d478', DEFAULT: '#d4af37', dark: '#9e7f1e' } },
+            fontFamily: { display: ['Cinzel', 'serif'], sans: ['Inter', 'sans-serif'] }
+          }
+        }
+      };
+    }
+  </script>
+  <style>
+    body { background-color: #0d0e11; color: #f4f4f5; overflow-x: hidden; }
+    .gold-glow { box-shadow: 0 0 25px rgba(212, 175, 55, 0.25); }
+    .card-hover { transition: border-color 0.35s ease, box-shadow 0.35s ease; }
+    .card-hover:hover { border-color: #d4af37; box-shadow: 0 12px 30px -8px rgba(212, 175, 55, 0.35); }
+    .reveal { opacity: 0; translate: 0 24px; transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), translate 0.7s ease-out; }
+    .reveal.active { opacity: 1; translate: 0 0; }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+
+<style id="naztech-clean-overrides">
+.partner-marquee__item{padding:14px 28px!important;gap:18px!important;min-height:84px!important}
+.partner-marquee__chip{background:transparent!important;border:none!important;padding:0!important;min-height:auto!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}
+.partner-marquee__logo,.partner-marquee__mark{height:54px!important;width:auto!important;max-width:240px!important;object-fit:contain!important;background:transparent!important;border-radius:8px!important}
+.partner-marquee__showcase,#tez3dModal,#webgl3dCanvas,.tez3d-stage,[data-3d-viewer]{display:none!important}
+</style>
+  <style id="naztech-catalog-16x9">
+  .service-card__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    background: #0b0e14;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+  }
+  .service-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .service-card:hover .service-card__media img,
+  .hizmet-kart:hover .service-card__media img,
+  [data-service]:hover .service-card__media img,
+  [data-catalog]:hover .service-card__media img,
+  [data-catalog]:focus-visible .service-card__media img {
+    transform: scale(1.05);
+  }
+  /* Legacy WebGL/3D surfaces are not part of the delivered experience. */
+  #hizmetModal canvas,
+  .modal-3d-wrap,
+  .webgl-container,
+  [data-3d-viewer] {
+    display: none !important;
+  }
+  #hizmetModal .modal__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 20px 24px 6px;
+    background: rgba(3, 5, 8, 0.32);
+  }
+  #hizmetModal .modal__gallery:empty { display: none; }
+  #hizmetModal .modal__figure {
+    flex: 1 1 30%;
+    max-width: calc(33.333% - 10px);
+    margin: 0;
+  }
+  #hizmetModal .modal__figure:first-child {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  #hizmetModal .modal__figure img {
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    cursor: default !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  #hizmetModal .modal__caption { padding: 8px 4px 2px; }
+  #hizmetModal .btn--whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 12px;
+    background: #25d366;
+    color: #052e16;
+    font-weight: 800;
+    text-decoration: none;
+    transition: filter 0.2s ease, transform 0.2s ease;
+  }
+  #hizmetModal .btn--whatsapp:hover,
+  #hizmetModal .btn--whatsapp:focus-visible {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+  @media (max-width: 720px) {
+    #hizmetModal .modal__figure,
+    #hizmetModal .modal__figure:first-child {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+</style>
+
+
+
+
+<style id="naztech-clean-hero">
+  #nzpNavButton, #nzpAuthOverlay { display: none !important; }
+  /* Yuvarlak halka katmanini kaldir, yazilar dogrudan arka plan uzerinde asil dursun */
+  main section:first-of-type .rounded-full,
+  section:first-of-type .rounded-full {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+</style>
+
+<script type="application/ld+json" id="naztech-local-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "NAZTECH BİLİŞİM · Lavox Elektronik Şanlıurfa",
+  "url": "https://naztechbilisim.com",
+  "telephone": "+905013731859",
+  "email": "ahmet.fener@naztechbilisim.com",
+  "founder": {
+    "@type": "Person",
+    "name": "Ahmet Barış Fener"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Akpıyar Mh. 402 Cd. Kaynak ve Türkmenoğlu Apt. No:23/A",
+    "addressLocality": "Karaköprü",
+    "addressRegion": "Şanlıurfa",
+    "postalCode": "63320",
+    "addressCountry": "TR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 37.2248,
+    "longitude": 38.8035
+  }
+}
+</script>
+<link rel="stylesheet" href="legal.css">
+<meta name="theme-color" content="#080a0f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="mobile.css">
+</head>
+<body class="font-sans antialiased">
+  <div class="nzt-preloader" id="nztPreloader" role="status" aria-live="polite" aria-label="NAZTECH yükleniyor">
+    <div class="nzt-preloader__inner">
+      <svg class="nzt-preloader__circuit" viewBox="0 0 300 120" fill="none" aria-hidden="true" focusable="false">
+        <path class="nzt-preloader__trace" d="M4 22H72l14-14h64l12 12h56l10-10h68" />
+        <path class="nzt-preloader__trace nzt-preloader__trace--b" d="M4 98H84l16 14h58l14-14h64l12 12h48" />
+        <path class="nzt-preloader__trace nzt-preloader__trace--c" d="M40 4v26l12 12v36l-12 12v26M262 6v28l-12 12v36l12 12v20" />
+        <circle class="nzt-preloader__node" cx="86" cy="8" r="3.5" />
+        <circle class="nzt-preloader__node nzt-preloader__node--b" cx="150" cy="20" r="3.5" />
+        <circle class="nzt-preloader__node" cx="100" cy="112" r="3.5" />
+        <circle class="nzt-preloader__node nzt-preloader__node--b" cx="220" cy="110" r="3.5" />
+      </svg>
+      <div class="nzt-preloader__wordmark">NAZTECH</div>
+      <div class="nzt-preloader__caption">ENERGY · TEKNOLOGY · SOFTWARE</div>
+      <div class="nzt-preloader__rail"><span class="nzt-preloader__fill"></span></div>
+    </div>
+  </div>
+  <header class="fixed top-0 w-full z-50 bg-obsidian/90 backdrop-blur-md border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+      <a href="#anasayfa" class="flex items-center gap-3 group">
+        <svg class="brand__logo" viewBox="0 0 100 80" fill="none" aria-hidden="true" focusable="false">
+          <path d="M95 16H45L33 6H20" stroke="#d4af37" stroke-width="4" stroke-linecap="round"/><circle cx="15" cy="6" r="5" stroke="#d4af37" stroke-width="3.5"/>
+          <path d="M95 32H34" stroke="#d4af37" stroke-width="4" stroke-linecap="round"/><circle cx="28" cy="32" r="5" stroke="#d4af37" stroke-width="3.5"/>
+          <path d="M95 48H20" stroke="#d4af37" stroke-width="4" stroke-linecap="round"/><circle cx="14" cy="48" r="5" stroke="#d4af37" stroke-width="3.5"/>
+          <path d="M95 64H45L33 74H22" stroke="#d4af37" stroke-width="4" stroke-linecap="round"/><circle cx="16" cy="74" r="5" stroke="#d4af37" stroke-width="3.5"/>
+        </svg>
+        <div>
+          <span class="font-display font-extrabold text-2xl tracking-wider text-white block leading-none">NAZTECH</span>
+          <span class="text-[9px] tracking-[0.2em] text-gold font-bold mt-1 border-t border-gold/60 pt-0.5 block">ENERGY · TEKNOLOGY · SOFTWARE</span>
+        </div>
+      </a>
+      <div class="nzp-nav-cluster">
+        <a href="https://wa.me/905013731859?text=Merhaba%20Naztech%20Bili%C5%9Fim%2C%20h%C4%B1zl%C4%B1%20teklif%20almak%20istiyorum." data-whatsapp-greeting target="_blank" rel="noopener noreferrer" class="bg-gold text-obsidian font-bold text-xs sm:text-sm px-4 py-2.5 rounded-lg hover:bg-gold-light transition gold-glow">Hızlı Teklif Al</a>
+      </div>
+    </div>
+  </header>
+  <section id="anasayfa" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <div class="absolute w-[340px] h-[340px] sm:w-[520px] sm:h-[520px] rounded-full border-[3px] border-gold/45 shadow-[0_0_90px_rgba(212,175,55,0.35)] energy-ring pointer-events-none" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-carbon border border-gold/30 text-gold text-xs font-bold tracking-widest uppercase mb-6">Şanlıurfa'nın Teknoloji ve Mühendislik Merkezi</span>
+      <h1 class="font-display text-4xl sm:text-6xl font-black text-white mb-4">NAZTECH <span class="text-gold">BİLİŞİM</span></h1>
+      <p class="font-display text-sm sm:text-base tracking-[0.28em] text-gold font-semibold uppercase mb-6">ENERGY - TEKNOLOGY - SOFTWARE</p>
+      <p class="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg mb-10">Güvenlik sistemlerinden endüstriyel elektrik altyapısına, yakıt otomasyonundan özel kurumsal yazılımlara kadar uçtan uca anahtar teslim çözümler.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#hizmetler" class="px-8 py-4 rounded-xl bg-gold text-obsidian font-extrabold hover:bg-gold-light transition gold-glow">8 Uzmanlık Alanımız</a>
+        <a href="tel:+905013731859" class="px-8 py-4 rounded-xl bg-carbon border border-gold/40 text-white font-bold hover:border-gold transition">0501 373 18 59 · Hemen Ara</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner-marquee" aria-label="NAZTECH kurumsal teknoloji ortakları">
+    <div class="partner-marquee__viewport">
+      <div class="partner-marquee__track">
+        <div class="partner-marquee__group">
+          <div class="partner-marquee__partner" data-partner="hikvision">
+            <span class="partner-marquee__chip partner-marquee__chip--hikvision"><svg class="partner-marquee__logo" viewBox="0 0 365 72" width="215" height="54" role="img" aria-label="HIKVISION"><text x="182" y="54" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-style="italic" font-size="52" letter-spacing="1.5"><tspan fill="#E60012">HIK</tspan><tspan fill="#FFFFFF">VISION</tspan></text></svg></span>
+            <span class="partner-marquee__divider" aria-hidden="true"></span>
+            <span class="partner-marquee__role">Resmi Çözüm Ortağı</span>
+          </div>
+          <div class="partner-marquee__partner" data-partner="n2mobil">
+            <span class="partner-marquee__chip"><img class="partner-marquee__logo" src="img/n2mobil_logo.png" data-logo-fallback="img/n2mobil_logo.jpg" width="190" height="45" alt="N2MOBİL kurumsal logosu"></span>
+            <span class="partner-marquee__divider" aria-hidden="true"></span>
+            <span class="partner-marquee__role">Yetkili Bayi &amp; Araç Takip Partneri</span>
+            <button type="button" class="partner-marquee__showcase" data-partner-showcase="5" aria-label="Katalog 5 N2MOBİL 3D GPS izleyiciyi aç">Katalog 5 · 3D GPS İzleyici</button>
+          </div>
+          <div class="partner-marquee__partner" data-partner="lavox">
+            <span class="partner-marquee__chip"><svg class="partner-marquee__logo" viewBox="0 0 320 84" width="200" height="54" role="img" aria-label="LAVOX electronics"><text x="160" y="52" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-style="italic" font-size="56" letter-spacing="2" fill="#19A7B8">LAVOX</text><text x="208" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-style="italic" font-size="22" letter-spacing="1.5" fill="#19A7B8">electronics</text></svg></span>
+            <span class="partner-marquee__divider" aria-hidden="true"></span>
+            <span class="partner-marquee__role">Kurumsal Teknoloji Partneri</span>
+          </div>
+        </div>
+        <div class="partner-marquee__group" aria-hidden="true">
+          <div class="partner-marquee__partner" data-partner="hikvision">
+            <span class="partner-marquee__chip partner-marquee__chip--hikvision"><svg class="partner-marquee__logo" viewBox="0 0 365 72" width="215" height="54" role="img" aria-label="HIKVISION"><text x="182" y="54" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-style="italic" font-size="52" letter-spacing="1.5"><tspan fill="#E60012">HIK</tspan><tspan fill="#FFFFFF">VISION</tspan></text></svg></span>
+            <span class="partner-marquee__divider" aria-hidden="true"></span>
+            <span class="partner-marquee__role">Resmi Çözüm Ortağı</span>
+          </div>
+          <div class="partner-marquee__partner" data-partner="n2mobil">
+            <span class="partner-marquee__chip"><img class="partner-marquee__logo" src="img/n2mobil_logo.png" data-logo-fallback="img/n2mobil_logo.jpg" width="190" height="45" alt=""></span>
+            <span class="partner-marquee__divider" aria-hidden="true"></span>
+            <span class="partner-marquee__role">Yetkili Bayi &amp; Araç Takip Partneri</span>
+            <button type="button" class="partner-marquee__showcase" data-partner-showcase="5" aria-label="Katalog 5 N2MOBİL 3D GPS izleyiciyi aç">Katalog 5 · 3D GPS İzleyici</button>
+          </div>
+          <div class="partner-marquee__partner" data-partner="lavox">
+            <span class="partner-marquee__chip"><svg class="partner-marquee__logo" viewBox="0 0 320 84" width="200" height="54" role="img" aria-label="LAVOX electronics"><text x="160" y="52" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-style="italic" font-size="56" letter-spacing="2" fill="#19A7B8">LAVOX</text><text x="208" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-style="italic" font-size="22" letter-spacing="1.5" fill="#19A7B8">electronics</text></svg></span>
+            <span class="partner-marquee__divider" aria-hidden="true"></span>
+            <span class="partner-marquee__role">Kurumsal Teknoloji Partneri</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nzt-kpi" aria-label="NAZTECH performans göstergeleri">
+    <div class="nzt-kpi__inner">
+      <div class="nzt-kpi__item" data-kpi aria-label="500 artı Tamamlanan Proje">
+        <span class="nzt-kpi__value" data-kpi-value data-kpi-target="500" data-kpi-suffix="+" aria-hidden="true">0+</span>
+        <span class="nzt-kpi__label">Tamamlanan Proje</span>
+      </div>
+      <div class="nzt-kpi__item" data-kpi aria-label="8 Uzmanlık Alanı">
+        <span class="nzt-kpi__value" data-kpi-value data-kpi-target="8" aria-hidden="true">0</span>
+        <span class="nzt-kpi__label">Uzmanlık Alanı</span>
+      </div>
+      <div class="nzt-kpi__item" data-kpi aria-label="yüzde 100 Müşteri Memnuniyeti">
+        <span class="nzt-kpi__value" data-kpi-value data-kpi-target="100" data-kpi-prefix="%" aria-hidden="true">%0</span>
+        <span class="nzt-kpi__label">Müşteri Memnuniyeti</span>
+      </div>
+      <div class="nzt-kpi__item" data-kpi aria-label="7/24 Kesintisiz Destek">
+        <span class="nzt-kpi__value" data-kpi-value data-kpi-target="24" data-kpi-prefix="7/" aria-hidden="true">7/0</span>
+        <span class="nzt-kpi__label">Kesintisiz Destek</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="hizmetler" class="py-24 bg-carbon/60 border-t border-gold/15">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="text-gold text-xs font-bold tracking-[0.25em] uppercase">Çözüm Alanlarımız</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-2">Uçtan Uca Teknoloji &amp; Mühendislik</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-obsidian border border-gold/20 rounded-2xl p-6 card-hover reveal" data-catalog="1" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="hizmetModal" aria-label="HIKVISION güvenlik sistemleri kataloğunu aç"><div class="service-card__media"><img src="img/hikvision_bullet.jpg" alt="HIKVISION dış mekân güvenlik kamerası" width="1920" height="1080" loading="lazy" decoding="async"></div><h3 class="font-display font-bold text-lg text-gold mb-2">1. Kamera Sistemleri</h3><p class="text-gray-400 text-sm">IP, AHD, gece görüşlü ve yapay zeka destekli kurumsal güvenlik kamera altyapıları ve uzaktan izleme çözümleri.</p></div>
+        <div class="bg-obsidian border border-gold/20 rounded-2xl p-6 card-hover reveal" data-catalog="2" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="hizmetModal" aria-label="Hırsız alarm sistemleri kataloğunu aç"><div class="service-card__media"><img src="img/alarm.png" alt="Akıllı hırsız alarm kontrol panosu" width="1920" height="1080" loading="lazy" decoding="async"></div><h3 class="font-display font-bold text-lg text-gold mb-2">2. Hırsız Alarm Sistemleri</h3><p class="text-gray-400 text-sm">İş yeri, fabrika ve konutlar için hareket sensörlü, mobil bildirimli ve siren entegreli akıllı güvenlik sistemleri.</p></div>
+        <div class="bg-obsidian border border-gold/20 rounded-2xl p-6 card-hover reveal" data-catalog="3" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="hizmetModal" aria-label="Bilişim ve ağ altyapısı kataloğunu aç"><div class="service-card__media"><img src="img/bilisim.jpg" alt="Kurumsal sunucu odası ve ağ altyapısı" width="1920" height="1080" loading="lazy" decoding="async"></div><h3 class="font-display font-bold text-lg text-gold mb-2">3. Bilişim</h3><p class="text-gray-400 text-sm">Kurumsal ağ kurulumu, sunucu altyapıları, bilgisayar donanım tedariği ve periyodik teknik bakım hizmetleri.</p></div>
+        <div class="bg-obsidian border border-gold/20 rounded-2xl p-6 card-hover reveal" data-catalog="4" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="hizmetModal" aria-label="Yakıt otomasyonu kataloğunu aç"><div class="service-card__media"><img src="img/yakit.jpg" alt="Akaryakıt pompası ve yakıt otomasyon sistemi" width="1920" height="1080" loading="lazy" decoding="async"></div><h3 class="font-display font-bold text-lg text-gold mb-2">4. Yakıt Otomasyon</h3><p class="text-gray-400 text-sm">Akaryakıt istasyonları ve kurumsal araç filoları için tam otomatik pompa, tank seviye ölçüm ve dolum kontrol sistemleri.</p></div>
+        <div class="bg-obsidian border border-gold/20 rounded-2xl p-6 card-hover reveal" data-catalog="5" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="hizmetModal" aria-label="Araç takip sistemleri kataloğunu aç"><div class="service-card__media"><img src="img/arac_takip.jpg" alt="N2MOBİL GPS araç takip cihazı" width="1920" height="1080" loading="lazy" decoding="async"></div><h3 class="font-display font-bold text-lg text-gold mb-2">5. Araç Takip Sistemleri</h3><p class="text-gray-400 text-sm">N2MOBİL yetkili bayiliğiyle 7/24 canlı GPS uydu takibi, hız ve rota raporlaması, motor blokaj ve filo yönetim çözümleri.</p></div>
+        <div class="bg-obsidian border border-gold/20 rounded-2xl p-6 card-hover reveal" data-catalog="6" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="hizmetModal" aria-label="Yazılım kataloğunu aç"><div class="service-card__media"><img src="img/yazilim.jpg" alt="Kurumsal yazılım geliştirme çalışma alanı" width="1920" height="1080" loading="lazy" decoding="async"></div><h3 class="font-display font-bold text-lg text-gold mb-2">6. Yazılım</h3><p class="text-gray-400 text-sm">İşletmelere özel ERP, web ve mobil uygulamalar, veri otomasyonu ve kurumsal dijital dönüşüm projeleri.</p></div>
+        <div class="bg-obsidian border border-gold/20 rounded-2xl p-6 card-hover reveal" data-catalog="7" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="hizmetModal" aria-label="Yangın ihbar sistemleri kataloğunu aç"><div class="service-card__media"><img src="img/yangin.jpg" alt="Yangın ihbar kontrol panosu" width="1920" height="1080" loading="lazy" decoding="async"></div><h3 class="font-display font-bold text-lg text-gold mb-2">7. Yangın İhbar Sistemleri</h3><p class="text-gray-400 text-sm">Adresli ve konvansiyonel yangın algılama panelleri, duman/ısı dedektörleri ve acil anons entegrasyonu.</p></div>
+        <div class="bg-obsidian border border-gold/20 rounded-2xl p-6 card-hover reveal" data-catalog="8" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="hizmetModal" aria-label="Elektrik kataloğunu aç"><div class="service-card__media"><img src="img/elektrik.jpg" alt="Endüstriyel elektrik dağıtım panoları" width="1920" height="1080" loading="lazy" decoding="async"></div><h3 class="font-display font-bold text-lg text-gold mb-2">8. Elektrik</h3><p class="text-gray-400 text-sm">Endüstriyel tesis, ticari yapı ve akıllı bina elektrik taahhüt, pano montajı ve enerji altyapı hizmetleri.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="indirme-merkezi" class="download-center" aria-labelledby="downloadTitle">
+    <div class="download-center__inner">
+      <div class="download-center__heading">
+        <span class="download-center__eyebrow">Resmî Yazılım Kaynakları</span>
+        <h2 id="downloadTitle">Resmi İndirme Merkezi</h2>
+        <p>Mobil Android uygulamaları ve masaüstü Windows/Linux yönetim yazılımları için yalnızca üretici ve mağaza kaynaklarına yönlendiriyoruz. İndirme öncesi 1,5 saniyelik altın devre taramasıyla bağlantı doğrulanır.</p>
+      </div>
+      <div class="download-center__grid">
+        <article class="download-card">
+          <span class="download-card__platform">Mobil · Android</span>
+          <h3>N2MOBİL Filo ve GPS</h3>
+          <p>Google Play üzerinden resmî N2MOBİL uygulamalarını arayın; araç takip, rota ve bildirim ayarları için kullanın.</p>
+          <button type="button" class="download-card__button" data-download-trigger data-download-url="https://play.google.com/store/search?q=n2mobil&amp;c=apps" data-download-label="N2MOBİL Android uygulaması">İndir</button>
+        </article>
+        <article class="download-card">
+          <span class="download-card__platform">Masaüstü · Windows</span>
+          <h3>iVMS-4200 İstemci</h3>
+          <p>HIKVISION kayıt cihazları ve kameralar için Windows masaüstü yönetim istemcisini resmî destek sayfasından alın.</p>
+          <button type="button" class="download-card__button" data-download-trigger data-download-url="https://www.hikvision.com/en/support/download/software/ivms-4200-client/" data-download-label="iVMS-4200 Windows istemcisi">İndir</button>
+        </article>
+        <article class="download-card">
+          <span class="download-card__platform">Masaüstü · Linux</span>
+          <h3>Kurumsal Yönetim Araçları</h3>
+          <p>Linux ortamları için üretici tarafından yayımlanan güncel yönetim yazılımlarına resmî indirme merkezinden erişin.</p>
+          <button type="button" class="download-card__button" data-download-trigger data-download-url="https://www.hikvision.com/en/support/download/software/" data-download-label="Linux yönetim yazılımları">İndir</button>
+        </article>
+      </div>
+      <p class="download-center__note">Bağlantılar üretici ve mağaza sitelerine açılır. Dosya bütünlüğünü yalnızca resmî kaynaktan doğrulayın. · Baysöz Yazılım (baysozlabs@proton.me)</p>
+    </div>
+  </section>
+
+  <div class="scan-modal" id="downloadScanModal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="scanTitle" aria-describedby="scanStatus">
+    <div class="scan-modal__backdrop" data-scan-close aria-hidden="true"></div>
+    <div class="scan-modal__panel" role="document" tabindex="-1">
+      <svg class="scan-modal__circuit" viewBox="0 0 320 120" fill="none" aria-hidden="true" focusable="false">
+        <path d="M4 30H70l14-14h62l12 12h58l12-12h88" />
+        <path d="M4 90H84l16 14h58l14-14h60l12 12h72" />
+        <path d="M44 6v28l12 12v34l-12 12v22M276 6v28l-12 12v34l12 12v22" />
+        <circle cx="84" cy="16" r="3.5" /><circle cx="150" cy="28" r="3.5" /><circle cx="106" cy="104" r="3.5" /><circle cx="244" cy="102" r="3.5" />
+      </svg>
+      <span class="scan-modal__beam" aria-hidden="true"></span>
+      <h2 id="scanTitle">Güvenli Bağlantı Doğrulanıyor</h2>
+      <p id="scanStatus">Altın devre taraması tamamlanıyor…</p>
+      <span class="scan-modal__progress" aria-hidden="true"><span></span></span>
+      <button type="button" class="scan-modal__cancel" data-scan-close>İptal</button>
+    </div>
+  </div>
+
+  <section id="iletisim" class="py-20 bg-obsidian border-t border-gold/20">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div class="bg-carbon border border-gold/30 rounded-3xl p-8 gold-glow reveal">
+        <span class="text-gold text-xs font-bold tracking-widest uppercase">Kurumsal İletişim</span>
+        <h2 class="font-display text-2xl font-extrabold text-gold mt-2">AHMET BARIŞ FENER</h2>
+        <p class="text-gray-400 text-sm mb-6">Teknik Birim Müdürü · Naztech Bilişim</p>
+        <ul class="space-y-3 text-sm text-gray-300 mb-6">
+          <li><strong class="text-gold">Tel:</strong> <a href="tel:+905013731859">0501 373 18 59</a></li>
+          <li><strong class="text-gold">E-Posta:</strong> <a href="mailto:ahmet.fener@naztechbilisim.com">ahmet.fener@naztechbilisim.com</a></li>
+          <li><strong class="text-gold">Web:</strong> naztechbilisim.com</li>
+          <li><strong class="text-gold">Adres:</strong> Akpıyar Mh. 402 Cd. Kaynak ve Türkmenoğlu Apt. No:23/A KARAKÖPRÜ / ŞANLIURFA</li>
+        </ul>
+        <a href="https://wa.me/905013731859?text=Merhaba%20Naztech%20Bili%C5%9Fim%2C%20h%C4%B1zl%C4%B1%20teklif%20almak%20istiyorum." data-whatsapp-greeting target="_blank" rel="noopener noreferrer" class="inline-block w-full text-center py-3.5 rounded-xl bg-gold text-obsidian font-extrabold hover:bg-gold-light transition">WhatsApp ile Hızlı İletişim</a>
+      </div>
+      <div class="map-panel reveal" style="position:relative;overflow:hidden;border-radius:1rem;border:1px solid rgba(212,175,55,0.32);min-height:290px;background:#0b0e14;">
+  <a class="map-panel__link" href="https://google.com" target="_blank" rel="noopener noreferrer" aria-label="Lavox Şanlıurfa Ana Bayi Harita Konumu" style="position:relative;display:flex;flex-direction:column;justify-content:space-between;width:100%;height:100%;min-height:290px;padding:1.5rem;border-radius:1rem;overflow:hidden;border:1px solid rgba(212,175,55,0.35);background:#0b0e14;text-decoration:none;">
+  <svg viewBox="0 0 600 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:0.8;">
+    <rect width="600" height="320" fill="#0b0e14"/>
+    <g stroke="#1e293b" stroke-width="2" fill="none">
+      <path d="M0,55 L600,82 M0,130 L600,122 M0,205 L600,218 M0,275 L600,265"/>
+      <path d="M85,0 L70,320 M195,0 L212,320 M315,0 L302,320 M435,0 L452,320 M535,0 L522,320"/>
+    </g>
+    <path d="M0,175 Q260,145 600,115" stroke="#D4AF37" stroke-width="4.5" stroke-opacity="0.45" fill="none"/>
+    <path d="M298,0 L318,320" stroke="#19A7B8" stroke-width="3.5" stroke-opacity="0.4" fill="none"/>
+    <circle cx="308" cy="148" r="36" fill="#D4AF37" fill-opacity="0.16"/>
+    <circle cx="308" cy="148" r="15" fill="#D4AF37" fill-opacity="0.35"/>
+    <circle cx="308" cy="148" r="6" fill="#D4AF37"/>
+  </svg>
+  <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;">
+    <span style="padding:5px 12px;border-radius:999px;font-size:11px;font-weight:600;background:rgba(11,14,20,0.92);border:1px solid rgba(212,175,55,0.45);color:#D4AF37;">Akpıyar Mh. 402 Cd. No:23/A</span>
+    <span style="padding:5px 12px;border-radius:999px;font-size:11px;font-weight:600;background:rgba(11,14,20,0.92);border:1px solid rgba(25,167,184,0.5);color:#19A7B8;">Google Haritalar'da Aç ↗</span>
+  </div>
+  <div style="position:relative;z-index:2;margin-top:auto;padding-top:95px;text-align:left;">
+    <div style="font-size:1.15rem;font-weight:700;color:#ffffff;">Lavox Şanlıurfa Ana Bayi</div>
+    <div style="font-size:0.82rem;color:#D4AF37;margin-top:4px;">Karaköprü / Şanlıurfa · Konum ve Yol Tarifi →</div>
+  </div>
+</a>
+</div>
+    </div>
+    <p class="text-center text-xs text-gray-500 mt-14">© 2026 NAZTECH BİLİŞİM · ENERGY - TEKNOLOGY - SOFTWARE · Karaköprü / Şanlıurfa</p>
+  </section>
+
+  
+<div class="modal" id="hizmetModal" data-modal-root hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+    <div class="modal__backdrop" data-modal-close aria-hidden="true"></div>
+    <div class="modal__panel" id="modalBox" role="document" tabindex="-1">
+      <button type="button" class="modal__close" id="closeModal" data-modal-close aria-label="Katalog penceresini kapat">&times;</button>
+      <div class="sponsor-banner" id="mBanner" hidden>
+        <span class="sponsor-banner__logo">HIKVISION</span>
+        <span class="sponsor-banner__text">Resmî Partner &amp; Sponsor</span>
+      </div>
+      <div class="modal__gallery" id="modalGallery" aria-label="16:9 kurumsal donanım vitrini"></div>
+      <div class="modal__content">
+        <span class="modal__badge" id="modalBadge"></span>
+        <h2 class="modal__title" id="modalTitle"></h2>
+        <p class="modal__description" id="modalDescription"></p>
+        <ul class="modal__specs" id="modalSpecs"></ul>
+        <a class="btn--whatsapp" id="modalWhatsApp" data-whatsapp-number="905013731859" href="https://wa.me/905013731859?text=Merhaba" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">&#128172;</span> WhatsApp 0501 373 18 59 · Bu Hizmet İçin Ücretsiz Keşif / Teklif Al</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const onScroll = () => reveals.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight - 60) el.classList.add('active'); });
+    window.addEventListener('scroll', onScroll); onScroll();
+  </script>
+  <script>window.addEventListener("DOMContentLoaded",function(){var p=document.getElementById("nztPreloader");if(p){setTimeout(function(){p.style.transition="opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1)";p.style.opacity="0";p.style.pointerEvents="none";setTimeout(function(){p.remove();},580);},1150);}});</script>
+<script src="kpi-counter.js" defer></script>
+<script src="matrix.js" defer></script>
+  <script src="hizmet-detay.js" defer></script>
+  <script src="security-shield.js" defer></script>
+  <script src="legal.js"></script>
+<script src="lavox-katalog.js"></script>
+<script src="live-reload.js"></script>
+</body>
+</html>

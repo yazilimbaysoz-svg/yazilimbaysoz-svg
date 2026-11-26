@@ -1,0 +1,100 @@
+{"iteration":1,"scenario_class":"malformed","input":"number(0)","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":2,"scenario_class":"mutation-after-open","input":"string(len=1) \"3\"","pass":true,"console_errors":0,"detail":"open=true; mutation=10; close=escape; restored=true"}
+{"iteration":3,"scenario_class":"valid","input":"string(len=1) \"7\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true"}
+{"iteration":4,"scenario_class":"malformed","input":"string(len=1) \"9\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":5,"scenario_class":"valid","input":"string(len=1) \"7\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true"}
+{"iteration":6,"scenario_class":"valid","input":"string(len=1) \"4\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true"}
+{"iteration":7,"scenario_class":"valid","input":"string(len=1) \"2\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true"}
+{"iteration":8,"scenario_class":"boundary","input":"string(len=3) \"‮1‬\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":9,"scenario_class":"malformed","input":"string(len=15) \"' OR '1'='1' --\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":10,"scenario_class":"mutation-after-open","input":"string(len=1) \"5\"","pass":true,"console_errors":0,"detail":"open=true; mutation=4; close=controller; restored=true"}
+{"iteration":11,"scenario_class":"valid","input":"string(len=1) \"1\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=3/3; specs=5/5; sponsor=true; close=escape; restored=true"}
+{"iteration":12,"scenario_class":"valid","input":"string(len=1) \"3\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true"}
+{"iteration":13,"scenario_class":"mutation-after-open","input":"string(len=1) \"8\"","pass":true,"console_errors":0,"detail":"open=true; mutation=7; close=controller; restored=true"}
+{"iteration":14,"scenario_class":"mutation-after-open","input":"string(len=1) \"4\"","pass":true,"console_errors":0,"detail":"open=true; mutation=11; close=escape; restored=true"}
+{"iteration":15,"scenario_class":"mutation-after-open","input":"string(len=1) \"1\"","pass":true,"console_errors":0,"detail":"open=true; mutation=8; close=backdrop; restored=true"}
+{"iteration":16,"scenario_class":"mutation-after-open","input":"string(len=1) \"7\"","pass":true,"console_errors":0,"detail":"open=true; mutation=6; close=controller; restored=true"}
+{"iteration":17,"scenario_class":"valid","input":"string(len=1) \"8\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true"}
+{"iteration":18,"scenario_class":"valid","input":"string(len=1) \"3\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true"}
+{"iteration":19,"scenario_class":"valid","input":"string(len=1) \"2\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true"}
+{"iteration":20,"scenario_class":"prototype","input":"object([object Object])","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":21,"scenario_class":"boundary","input":"string(len=1) \"１\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":22,"scenario_class":"boundary","input":"string(len=1) \"\\ud800\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":23,"scenario_class":"mutation-after-open","input":"string(len=1) \"1\"","pass":true,"console_errors":0,"detail":"open=true; mutation=0; close=escape; restored=true"}
+{"iteration":24,"scenario_class":"prototype","input":"object([object Object])","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":25,"scenario_class":"valid","input":"string(len=1) \"6\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true"}
+{"iteration":26,"scenario_class":"malformed","input":"undefined","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":27,"scenario_class":"valid","input":"string(len=1) \"1\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=3/3; specs=5/5; sponsor=true; close=backdrop; restored=true"}
+{"iteration":28,"scenario_class":"empty","input":"string(len=0) \"\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":29,"scenario_class":"valid","input":"string(len=1) \"2\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true"}
+{"iteration":30,"scenario_class":"valid","input":"string(len=1) \"4\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true"}
+{"iteration":31,"scenario_class":"malformed","input":"object([object Object])","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":32,"scenario_class":"malformed","input":"string(len=3) \"abc\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":33,"scenario_class":"valid","input":"string(len=1) \"7\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true"}
+{"iteration":34,"scenario_class":"valid","input":"string(len=1) \"5\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=7/7; sponsor=false; close=controller; restored=true"}
+{"iteration":35,"scenario_class":"boundary","input":"string(len=3) \"\\r9\\t\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":36,"scenario_class":"prototype","input":"bigint(1)","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":37,"scenario_class":"valid","input":"string(len=1) \"5\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=7/7; sponsor=false; close=controller; restored=true"}
+{"iteration":38,"scenario_class":"valid","input":"string(len=1) \"4\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true"}
+{"iteration":39,"scenario_class":"boundary","input":"string(len=2) \"\\u00001\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":40,"scenario_class":"valid","input":"string(len=1) \"1\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=3/3; specs=5/5; sponsor=true; close=controller; restored=true"}
+{"iteration":41,"scenario_class":"valid","input":"string(len=1) \"6\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true"}
+{"iteration":42,"scenario_class":"valid","input":"string(len=1) \"8\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true"}
+{"iteration":43,"scenario_class":"valid","input":"string(len=1) \"3\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true"}
+{"iteration":44,"scenario_class":"mutation-after-open","input":"string(len=1) \"6\"","pass":true,"console_errors":0,"detail":"open=true; mutation=5; close=escape; restored=true"}
+{"iteration":45,"scenario_class":"mutation-after-open","input":"string(len=1) \"2\"","pass":true,"console_errors":0,"detail":"open=true; mutation=1; close=backdrop; restored=true"}
+{"iteration":46,"scenario_class":"prototype","input":"symbol(Symbol(1))","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":47,"scenario_class":"valid","input":"string(len=1) \"7\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true"}
+{"iteration":48,"scenario_class":"valid","input":"string(len=1) \"5\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=7/7; sponsor=false; close=backdrop; restored=true"}
+{"iteration":49,"scenario_class":"valid","input":"string(len=1) \"8\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true"}
+{"iteration":50,"scenario_class":"valid","input":"string(len=1) \"2\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true"}
+{"iteration":51,"scenario_class":"prototype","input":"object([object String])","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":52,"scenario_class":"valid","input":"string(len=1) \"3\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true"}
+{"iteration":53,"scenario_class":"boundary","input":"string(len=1) \"\\u0000\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":54,"scenario_class":"malformed","input":"string(len=25) \"<script>alert(1)</script>\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":55,"scenario_class":"valid","input":"string(len=1) \"4\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true"}
+{"iteration":56,"scenario_class":"valid","input":"string(len=1) \"1\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=3/3; specs=5/5; sponsor=true; close=escape; restored=true"}
+{"iteration":57,"scenario_class":"boundary","input":"string(len=2) \"１１\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":58,"scenario_class":"prototype","input":"object([object Object])","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":59,"scenario_class":"boundary","input":"string(len=2) \"9\\n\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":60,"scenario_class":"valid","input":"string(len=1) \"6\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true"}
+{"iteration":61,"scenario_class":"whitespace","input":"string(len=1) \"\\t\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":62,"scenario_class":"prototype","input":"object([object Array])","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":63,"scenario_class":"valid","input":"string(len=1) \"1\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=3/3; specs=5/5; sponsor=true; close=backdrop; restored=true"}
+{"iteration":64,"scenario_class":"mutation-after-open","input":"string(len=1) \"3\"","pass":true,"console_errors":0,"detail":"open=true; mutation=2; close=controller; restored=true"}
+{"iteration":65,"scenario_class":"empty","input":"string(len=0) \"\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":66,"scenario_class":"empty","input":"string(len=0) \"\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":67,"scenario_class":"boundary","input":"string(len=10001) \"                                                …(+9953)\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":68,"scenario_class":"boundary","input":"string(len=2) \"1\\u0000\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":69,"scenario_class":"valid","input":"string(len=1) \"2\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true"}
+{"iteration":70,"scenario_class":"malformed","input":"number(Infinity)","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":71,"scenario_class":"mutation-after-open","input":"string(len=1) \"2\"","pass":true,"console_errors":0,"detail":"open=true; mutation=9; close=escape; restored=true"}
+{"iteration":72,"scenario_class":"valid","input":"string(len=1) \"8\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true"}
+{"iteration":73,"scenario_class":"prototype","input":"object([object Object])","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":74,"scenario_class":"valid","input":"string(len=1) \"6\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true"}
+{"iteration":75,"scenario_class":"mutation-after-open","input":"string(len=1) \"4\"","pass":true,"console_errors":0,"detail":"open=true; mutation=3; close=backdrop; restored=true"}
+{"iteration":76,"scenario_class":"empty","input":"string(len=0) \"\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":77,"scenario_class":"valid","input":"string(len=1) \"8\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true"}
+{"iteration":78,"scenario_class":"malformed","input":"boolean(true)","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":79,"scenario_class":"valid","input":"string(len=1) \"5\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=7/7; sponsor=false; close=controller; restored=true"}
+{"iteration":80,"scenario_class":"valid","input":"string(len=1) \"4\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=escape; restored=true"}
+{"iteration":81,"scenario_class":"valid","input":"string(len=1) \"3\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true"}
+{"iteration":82,"scenario_class":"whitespace","input":"string(len=1) \" \"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":83,"scenario_class":"malformed","input":"number(-1)","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":84,"scenario_class":"boundary","input":"string(len=2) \"ı1\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":85,"scenario_class":"malformed","input":"object([object Array])","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":86,"scenario_class":"malformed","input":"number(NaN)","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":87,"scenario_class":"prototype","input":"object(<hostile-proxy>)","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":88,"scenario_class":"valid","input":"string(len=1) \"6\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=controller; restored=true"}
+{"iteration":89,"scenario_class":"malformed","input":"boolean(false)","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":90,"scenario_class":"whitespace","input":"string(len=1) \"\\n\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":91,"scenario_class":"whitespace","input":"string(len=3) \"   \"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":92,"scenario_class":"boundary","input":"string(len=10000) \"111111111111111111111111111111111111111111111111…(+9952)\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":93,"scenario_class":"malformed","input":"string(len=2) \"01\"","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":94,"scenario_class":"valid","input":"string(len=1) \"5\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=7/7; sponsor=false; close=controller; restored=true"}
+{"iteration":95,"scenario_class":"prototype","input":"object([object Number])","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":96,"scenario_class":"malformed","input":"number(9)","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":97,"scenario_class":"prototype","input":"object([object Object])","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":98,"scenario_class":"prototype","input":"object([object Object])","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}
+{"iteration":99,"scenario_class":"valid","input":"string(len=1) \"7\"","pass":true,"console_errors":0,"detail":"card-binding=ok; open=true; gallery=1/1; specs=5/5; sponsor=false; close=backdrop; restored=true"}
+{"iteration":100,"scenario_class":"malformed","input":"null","pass":true,"console_errors":0,"detail":"rejected; dom-unchanged; hostile-card-inert"}

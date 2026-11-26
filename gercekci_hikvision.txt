@@ -1,0 +1,8 @@
+You are the Principal 3D Graphics Engineer of Baysoz Labs. Upgrade `~/projeler/naztech-bilisim/webgl-3d-viewer.js` so the 3D models look like authentic, photorealistic commercial hardware instead of basic boxes:
+1) For Catalog 1 (Kamera Sistemleri - HIKVISION): Build a detailed, realistic **Hikvision DS-2CD2T87G2-L ColorVu White Bullet IP Camera** using Three.js PBR materials (`MeshStandardMaterial` / `MeshPhysicalMaterial` with studio lighting & environment reflections):
+   - Sleek matte-white aerodynamic aluminum housing (`#f4f5f7`) with beveled edges and top white sunshield visor.
+   - Glossy black front bezel (`#111317`), multi-element glass optical lens with blue/purple anti-reflective coating, warm white ColorVu LED & IR sensor ring.
+   - Crisp dynamic canvas texture stamped onto both sides of the white camera body displaying the authentic red/black **HIKVISION** brand logo and `ColorVu 4K` badge.
+   - Articulated white wall-mount bracket arm with circular base flange and cable gland.
+2) Upgrade the other 7 catalog 3D models with realistic PBR materials, metallic bevels, indicator LEDs, and dynamic brand textures (including **N2MOBİL** branded black metallic GPS tracker with SMA antennas for Catalog 5).
+3) Ensure smooth 360° drag rotation, wheel/+/- zoom, and launch `http://127.0.0.1:8787` in Flatpak Google Chrome (`flatpak run com.google.Chrome --new-window "http://127.0.0.1:8787"`).

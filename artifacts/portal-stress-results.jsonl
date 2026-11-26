@@ -1,0 +1,100 @@
+{"run":1,"category":"valid","role":"dealer","result":"PASS","detail":"role=dealer; category=valid; payload=<img src=x o; console=0; fetch=0","elapsedMs":59}
+{"run":2,"category":"valid","role":"dealer","result":"PASS","detail":"role=dealer; category=valid; payload=Kayıt 1 · de; console=0; fetch=0","elapsedMs":55}
+{"run":3,"category":"valid","role":"customer","result":"PASS","detail":"role=customer; category=valid; payload=Kayıt 2 · de; console=0; fetch=0","elapsedMs":46}
+{"run":4,"category":"valid","role":"admin","result":"PASS","detail":"role=admin; category=valid; payload=Kayıt 3 · de; console=0; fetch=0","elapsedMs":79}
+{"run":5,"category":"valid","role":"admin","result":"PASS","detail":"role=admin; category=valid; payload=Kayıt 4 · de; console=0; fetch=0","elapsedMs":60}
+{"run":6,"category":"valid","role":"customer","result":"PASS","detail":"role=customer; category=valid; payload=Kayıt 5 · de; console=0; fetch=0","elapsedMs":55}
+{"run":7,"category":"valid","role":"customer","result":"PASS","detail":"role=customer; category=valid; payload=Kayıt 6 · de; console=0; fetch=0","elapsedMs":49}
+{"run":8,"category":"valid","role":"dealer","result":"PASS","detail":"role=dealer; category=valid; payload=<img src=x o; console=0; fetch=0","elapsedMs":40}
+{"run":9,"category":"valid","role":"admin","result":"PASS","detail":"role=admin; category=valid; payload=Kayıt 8 · de; console=0; fetch=0","elapsedMs":58}
+{"run":10,"category":"valid","role":"dealer","result":"PASS","detail":"role=dealer; category=valid; payload=Kayıt 9 · de; console=0; fetch=0","elapsedMs":37}
+{"run":11,"category":"valid","role":"dealer","result":"PASS","detail":"role=dealer; category=valid; payload=Kayıt 10 · d; console=0; fetch=0","elapsedMs":38}
+{"run":12,"category":"valid","role":"customer","result":"PASS","detail":"role=customer; category=valid; payload=Kayıt 11 · d; console=0; fetch=0","elapsedMs":53}
+{"run":13,"category":"valid","role":"customer","result":"PASS","detail":"role=customer; category=valid; payload=Kayıt 12 · d; console=0; fetch=0","elapsedMs":38}
+{"run":14,"category":"valid","role":"admin","result":"PASS","detail":"role=admin; category=valid; payload=Kayıt 13 · d; console=0; fetch=0","elapsedMs":57}
+{"run":15,"category":"valid","role":"customer","result":"PASS","detail":"role=customer; category=valid; payload=<img src=x o; console=0; fetch=0","elapsedMs":35}
+{"run":16,"category":"valid","role":"dealer","result":"PASS","detail":"role=dealer; category=valid; payload=Kayıt 15 · d; console=0; fetch=0","elapsedMs":38}
+{"run":17,"category":"valid","role":"customer","result":"PASS","detail":"role=customer; category=valid; payload=Kayıt 16 · d; console=0; fetch=0","elapsedMs":34}
+{"run":18,"category":"valid","role":"admin","result":"PASS","detail":"role=admin; category=valid; payload=Kayıt 17 · d; console=0; fetch=0","elapsedMs":50}
+{"run":19,"category":"valid","role":"customer","result":"PASS","detail":"role=customer; category=valid; payload=Kayıt 18 · d; console=0; fetch=0","elapsedMs":34}
+{"run":20,"category":"valid","role":"admin","result":"PASS","detail":"role=admin; category=valid; payload=Kayıt 19 · d; console=0; fetch=0","elapsedMs":50}
+{"run":21,"category":"valid","role":"dealer","result":"PASS","detail":"role=dealer; category=valid; payload=Kayıt 20 · d; console=0; fetch=0","elapsedMs":37}
+{"run":22,"category":"valid","role":"dealer","result":"PASS","detail":"role=dealer; category=valid; payload=<img src=x o; console=0; fetch=0","elapsedMs":33}
+{"run":23,"category":"valid","role":"customer","result":"PASS","detail":"role=customer; category=valid; payload=Kayıt 22 · d; console=0; fetch=0","elapsedMs":35}
+{"run":24,"category":"valid","role":"dealer","result":"PASS","detail":"role=dealer; category=valid; payload=Kayıt 23 · d; console=0; fetch=0","elapsedMs":37}
+{"run":25,"category":"valid","role":"admin","result":"PASS","detail":"role=admin; category=valid; payload=Kayıt 24 · d; console=0; fetch=0","elapsedMs":47}
+{"run":26,"category":"empty","role":"dealer","result":"PASS","detail":"role=dealer; category=empty; payload=Kayıt 25 · d; console=0; fetch=0","elapsedMs":44}
+{"run":27,"category":"empty","role":"dealer","result":"PASS","detail":"role=dealer; category=empty; payload=Kayıt 26 · d; console=0; fetch=0","elapsedMs":37}
+{"run":28,"category":"empty","role":"admin","result":"PASS","detail":"role=admin; category=empty; payload=Kayıt 27 · d; console=0; fetch=0","elapsedMs":49}
+{"run":29,"category":"empty","role":"customer","result":"PASS","detail":"role=customer; category=empty; payload=<img src=x o; console=0; fetch=0","elapsedMs":34}
+{"run":30,"category":"empty","role":"customer","result":"PASS","detail":"role=customer; category=empty; payload=Kayıt 29 · d; console=0; fetch=0","elapsedMs":37}
+{"run":31,"category":"empty","role":"customer","result":"PASS","detail":"role=customer; category=empty; payload=Kayıt 30 · d; console=0; fetch=0","elapsedMs":33}
+{"run":32,"category":"empty","role":"dealer","result":"PASS","detail":"role=dealer; category=empty; payload=Kayıt 31 · d; console=0; fetch=0","elapsedMs":34}
+{"run":33,"category":"empty","role":"admin","result":"PASS","detail":"role=admin; category=empty; payload=Kayıt 32 · d; console=0; fetch=0","elapsedMs":49}
+{"run":34,"category":"empty","role":"customer","result":"PASS","detail":"role=customer; category=empty; payload=Kayıt 33 · d; console=0; fetch=0","elapsedMs":33}
+{"run":35,"category":"empty","role":"dealer","result":"PASS","detail":"role=dealer; category=empty; payload=Kayıt 34 · d; console=0; fetch=0","elapsedMs":38}
+{"run":36,"category":"empty","role":"dealer","result":"PASS","detail":"role=dealer; category=empty; payload=<img src=x o; console=0; fetch=0","elapsedMs":34}
+{"run":37,"category":"empty","role":"dealer","result":"PASS","detail":"role=dealer; category=empty; payload=Kayıt 36 · d; console=0; fetch=0","elapsedMs":34}
+{"run":38,"category":"empty","role":"admin","result":"PASS","detail":"role=admin; category=empty; payload=Kayıt 37 · d; console=0; fetch=0","elapsedMs":50}
+{"run":39,"category":"empty","role":"admin","result":"PASS","detail":"role=admin; category=empty; payload=Kayıt 38 · d; console=0; fetch=0","elapsedMs":50}
+{"run":40,"category":"empty","role":"customer","result":"PASS","detail":"role=customer; category=empty; payload=Kayıt 39 · d; console=0; fetch=0","elapsedMs":41}
+{"run":41,"category":"empty","role":"admin","result":"PASS","detail":"role=admin; category=empty; payload=Kayıt 40 · d; console=0; fetch=0","elapsedMs":51}
+{"run":42,"category":"empty","role":"dealer","result":"PASS","detail":"role=dealer; category=empty; payload=Kayıt 41 · d; console=0; fetch=0","elapsedMs":38}
+{"run":43,"category":"empty","role":"dealer","result":"PASS","detail":"role=dealer; category=empty; payload=<img src=x o; console=0; fetch=0","elapsedMs":32}
+{"run":44,"category":"empty","role":"dealer","result":"PASS","detail":"role=dealer; category=empty; payload=Kayıt 43 · d; console=0; fetch=0","elapsedMs":33}
+{"run":45,"category":"empty","role":"customer","result":"PASS","detail":"role=customer; category=empty; payload=Kayıt 44 · d; console=0; fetch=0","elapsedMs":35}
+{"run":46,"category":"empty","role":"customer","result":"PASS","detail":"role=customer; category=empty; payload=Kayıt 45 · d; console=0; fetch=0","elapsedMs":33}
+{"run":47,"category":"empty","role":"customer","result":"PASS","detail":"role=customer; category=empty; payload=Kayıt 46 · d; console=0; fetch=0","elapsedMs":34}
+{"run":48,"category":"empty","role":"customer","result":"PASS","detail":"role=customer; category=empty; payload=Kayıt 47 · d; console=0; fetch=0","elapsedMs":36}
+{"run":49,"category":"empty","role":"admin","result":"PASS","detail":"role=admin; category=empty; payload=Kayıt 48 · d; console=0; fetch=0","elapsedMs":55}
+{"run":50,"category":"empty","role":"dealer","result":"PASS","detail":"role=dealer; category=empty; payload=<img src=x o; console=0; fetch=0","elapsedMs":37}
+{"run":51,"category":"malformed","role":"dealer","result":"PASS","detail":"role=dealer; category=malformed; payload=Kayıt 50 · d; console=0; fetch=0","elapsedMs":32}
+{"run":52,"category":"malformed","role":"dealer","result":"PASS","detail":"role=dealer; category=malformed; payload=Kayıt 51 · d; console=0; fetch=0","elapsedMs":31}
+{"run":53,"category":"malformed","role":"dealer","result":"PASS","detail":"role=dealer; category=malformed; payload=Kayıt 52 · d; console=0; fetch=0","elapsedMs":36}
+{"run":54,"category":"malformed","role":"customer","result":"PASS","detail":"role=customer; category=malformed; payload=Kayıt 53 · d; console=0; fetch=0","elapsedMs":35}
+{"run":55,"category":"malformed","role":"dealer","result":"PASS","detail":"role=dealer; category=malformed; payload=Kayıt 54 · d; console=0; fetch=0","elapsedMs":32}
+{"run":56,"category":"malformed","role":"dealer","result":"PASS","detail":"role=dealer; category=malformed; payload=Kayıt 55 · d; console=0; fetch=0","elapsedMs":33}
+{"run":57,"category":"malformed","role":"dealer","result":"PASS","detail":"role=dealer; category=malformed; payload=<img src=x o; console=0; fetch=0","elapsedMs":45}
+{"run":58,"category":"malformed","role":"dealer","result":"PASS","detail":"role=dealer; category=malformed; payload=Kayıt 57 · d; console=0; fetch=0","elapsedMs":38}
+{"run":59,"category":"malformed","role":"dealer","result":"PASS","detail":"role=dealer; category=malformed; payload=Kayıt 58 · d; console=0; fetch=0","elapsedMs":33}
+{"run":60,"category":"malformed","role":"admin","result":"PASS","detail":"role=admin; category=malformed; payload=Kayıt 59 · d; console=0; fetch=0","elapsedMs":47}
+{"run":61,"category":"malformed","role":"customer","result":"PASS","detail":"role=customer; category=malformed; payload=Kayıt 60 · d; console=0; fetch=0","elapsedMs":32}
+{"run":62,"category":"malformed","role":"admin","result":"PASS","detail":"role=admin; category=malformed; payload=Kayıt 61 · d; console=0; fetch=0","elapsedMs":48}
+{"run":63,"category":"malformed","role":"dealer","result":"PASS","detail":"role=dealer; category=malformed; payload=Kayıt 62 · d; console=0; fetch=0","elapsedMs":31}
+{"run":64,"category":"malformed","role":"admin","result":"PASS","detail":"role=admin; category=malformed; payload=<img src=x o; console=0; fetch=0","elapsedMs":47}
+{"run":65,"category":"malformed","role":"customer","result":"PASS","detail":"role=customer; category=malformed; payload=Kayıt 64 · d; console=0; fetch=0","elapsedMs":31}
+{"run":66,"category":"malformed","role":"dealer","result":"PASS","detail":"role=dealer; category=malformed; payload=Kayıt 65 · d; console=0; fetch=0","elapsedMs":31}
+{"run":67,"category":"malformed","role":"customer","result":"PASS","detail":"role=customer; category=malformed; payload=Kayıt 66 · d; console=0; fetch=0","elapsedMs":31}
+{"run":68,"category":"malformed","role":"dealer","result":"PASS","detail":"role=dealer; category=malformed; payload=Kayıt 67 · d; console=0; fetch=0","elapsedMs":34}
+{"run":69,"category":"malformed","role":"customer","result":"PASS","detail":"role=customer; category=malformed; payload=Kayıt 68 · d; console=0; fetch=0","elapsedMs":30}
+{"run":70,"category":"malformed","role":"customer","result":"PASS","detail":"role=customer; category=malformed; payload=Kayıt 69 · d; console=0; fetch=0","elapsedMs":30}
+{"run":71,"category":"malformed","role":"admin","result":"PASS","detail":"role=admin; category=malformed; payload=<img src=x o; console=0; fetch=0","elapsedMs":48}
+{"run":72,"category":"malformed","role":"customer","result":"PASS","detail":"role=customer; category=malformed; payload=Kayıt 71 · d; console=0; fetch=0","elapsedMs":37}
+{"run":73,"category":"malformed","role":"admin","result":"PASS","detail":"role=admin; category=malformed; payload=Kayıt 72 · d; console=0; fetch=0","elapsedMs":48}
+{"run":74,"category":"malformed","role":"dealer","result":"PASS","detail":"role=dealer; category=malformed; payload=Kayıt 73 · d; console=0; fetch=0","elapsedMs":32}
+{"run":75,"category":"malformed","role":"admin","result":"PASS","detail":"role=admin; category=malformed; payload=Kayıt 74 · d; console=0; fetch=0","elapsedMs":49}
+{"run":76,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=Kayıt 75 · d; console=0; fetch=8","elapsedMs":32}
+{"run":77,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=Kayıt 76 · d; console=0; fetch=8","elapsedMs":31}
+{"run":78,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=<img src=x o; console=0; fetch=8","elapsedMs":32}
+{"run":79,"category":"boundary","role":"admin","result":"PASS","detail":"role=admin; category=boundary; payload=Kayıt 78 · d; console=0; fetch=8","elapsedMs":46}
+{"run":80,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=Kayıt 79 · d; console=0; fetch=8","elapsedMs":32}
+{"run":81,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=Kayıt 80 · d; console=0; fetch=8","elapsedMs":34}
+{"run":82,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=Kayıt 81 · d; console=0; fetch=8","elapsedMs":31}
+{"run":83,"category":"boundary","role":"customer","result":"PASS","detail":"role=customer; category=boundary; payload=Kayıt 82 · d; console=0; fetch=8","elapsedMs":31}
+{"run":84,"category":"boundary","role":"customer","result":"PASS","detail":"role=customer; category=boundary; payload=Kayıt 83 · d; console=0; fetch=8","elapsedMs":32}
+{"run":85,"category":"boundary","role":"customer","result":"PASS","detail":"role=customer; category=boundary; payload=<img src=x o; console=0; fetch=8","elapsedMs":31}
+{"run":86,"category":"boundary","role":"admin","result":"PASS","detail":"role=admin; category=boundary; payload=Kayıt 85 · d; console=0; fetch=8","elapsedMs":63}
+{"run":87,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=Kayıt 86 · d; console=0; fetch=8","elapsedMs":32}
+{"run":88,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=Kayıt 87 · d; console=0; fetch=8","elapsedMs":31}
+{"run":89,"category":"boundary","role":"customer","result":"PASS","detail":"role=customer; category=boundary; payload=Kayıt 88 · d; console=0; fetch=8","elapsedMs":34}
+{"run":90,"category":"boundary","role":"admin","result":"PASS","detail":"role=admin; category=boundary; payload=Kayıt 89 · d; console=0; fetch=8","elapsedMs":45}
+{"run":91,"category":"boundary","role":"customer","result":"PASS","detail":"role=customer; category=boundary; payload=Kayıt 90 · d; console=0; fetch=8","elapsedMs":34}
+{"run":92,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=<img src=x o; console=0; fetch=8","elapsedMs":31}
+{"run":93,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=Kayıt 92 · d; console=0; fetch=8","elapsedMs":32}
+{"run":94,"category":"boundary","role":"customer","result":"PASS","detail":"role=customer; category=boundary; payload=Kayıt 93 · d; console=0; fetch=8","elapsedMs":30}
+{"run":95,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=Kayıt 94 · d; console=0; fetch=8","elapsedMs":32}
+{"run":96,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=Kayıt 95 · d; console=0; fetch=8","elapsedMs":34}
+{"run":97,"category":"boundary","role":"customer","result":"PASS","detail":"role=customer; category=boundary; payload=Kayıt 96 · d; console=0; fetch=8","elapsedMs":31}
+{"run":98,"category":"boundary","role":"customer","result":"PASS","detail":"role=customer; category=boundary; payload=Kayıt 97 · d; console=0; fetch=8","elapsedMs":31}
+{"run":99,"category":"boundary","role":"dealer","result":"PASS","detail":"role=dealer; category=boundary; payload=<img src=x o; console=0; fetch=8","elapsedMs":32}
+{"run":100,"category":"boundary","role":"customer","result":"PASS","detail":"role=customer; category=boundary; payload=Kayıt 99 · d; console=0; fetch=8","elapsedMs":32}
