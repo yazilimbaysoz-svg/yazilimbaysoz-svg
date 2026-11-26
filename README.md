@@ -139,6 +139,7 @@ Python 3.11+ ve tek bağımlılık bile yok.
 | [baysoz-ssrfcanon](https://github.com/yazilimbaysoz-svg/baysoz-ssrfcanon) | Offline SSRF guard differential oracle for URL/IP canonicalization across parser profiles, with an adversarial bypass corpus and deterministic SARIF CI gates | Stack: `Python, pytest, hatchling` |
 | [baysoz-archivebound](https://github.com/yazilimbaysoz-svg/baysoz-archivebound) | Offline archive-extraction confinement oracle with differential symlink re-rooting, hardlink and canonicalization checks and SARIF CI gates — Baysöz Labs <baysozlabs@proton.me> | Stack: `Python, zipfile, tarfile, uv, pytest, ruff, semgrep` |
 | [baysoz-provenancegate](https://github.com/yazilimbaysoz-svg/baysoz-provenancegate) | Offline SLSA provenance trust gate with DSSE signature verification, artifact digest binding, build-policy enforcement and SARIF CI reports — Baysöz Labs | Stack: `Python, cryptography, uv` |
+| [baysoz-contractlattice](https://github.com/yazilimbaysoz-svg/baysoz-contractlattice) | Offline OpenAPI 3.x semantic breaking-change gate with deterministic SARIF CI enforcement and expiring waivers. | Stack: `Python, PyYAML, uv` |
 <!-- FACTORY:END -->
 
 ---
